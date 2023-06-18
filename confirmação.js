@@ -1,0 +1,53 @@
+const addloading = () => {
+  const load = document.querySelector('#load');
+  load.innerHTML = '<img src="fotos/load.gif" alt="GIF animado" id="">';
+}
+
+const removeloading = () => {
+  const alerta = document.querySelector('#alerta');
+  alerta.innerHTML = '<div class="d-flex justify-content-center mt-5 h-100"> <div class="d-flex align-items-center align-self-center card p-3 text-center cookies"><img src="https://i.pinimg.com/originals/a1/cd/2e/a1cd2e4a82bf9407d751f02f81baf257.png" width="50" class="core"><span class="mt-2"><b>Confirmação Feita com sucesso</b></span><button class="btn btn-dark mt-3 px-4" type="button" id="reloadButton">✔️</button> </div> </div>';
+
+  const reloadButton = document.querySelector('#reloadButton');
+  reloadButton.addEventListener('click', function() {
+    location.reload();
+  });
+
+}
+
+
+/* removeloading(); */
+  
+const handleSubmit = (event) => {
+  event.preventDefault();
+  addloading();
+  
+  const name = document.querySelector('input[name=name]').value;
+  const Presentes = document.querySelector('select[name=Presentes]').value;
+  const email = document.querySelector('input[name=email]').value;
+  const presença = document.querySelector('input[name=presença]').value;
+
+  fetch('https://api.sheetmonkey.io/form/wnxVCxtKEARrR36z6kd5kM', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name, Presentes, email, presença }),
+  }).then(() => {
+    removeloading();
+  })/* .then(() => {
+    setTimeout(() => {
+      location.reload(true);
+    }, 1000);
+  }) */;
+}
+
+/* const handleSubmit1= (event) => {
+  setTimeout(() => {
+    location.reload(true)}, 1000);} */
+
+
+document.querySelector('form').addEventListener('submit', handleSubmit);/* location.reload(true); */
+
+
+  
