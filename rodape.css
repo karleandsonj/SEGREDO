@@ -1,5 +1,5 @@
 footer {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 5px;
     position: fixed;
     left: 0;
@@ -15,7 +15,7 @@ footer {
   }
   
   .qrcode {
-/*     background-color: aqua; */
+    /* background-color: rgb(21, 255, 0); */
     width: 12vh;
     display: flex;
     justify-content: center;
@@ -23,29 +23,32 @@ footer {
   }
   
   .qrcode1 {
-    height: 12vh;
+    height: 8vh;
     cursor: pointer;
   }
   
   .container-rodape {
-    /* background-color: aqua;  */
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: flex-start; /* Alinha à esquerda */
-    /* margin-top: 1.5%; */
-    /* m-height: 20% ;  */
-    /* Garante que o container ocupe pelo menos a altura total da tela */
-    margin: 0;
-    left: 2px;
-    font-size: 12px;
-    flex: 1;
+    /* background-color: rgb(246, 255, 162);  */
+    width: 100%;
+    
   }
   
+  .rodape-text{
+    left: 2px;
+    display: flex;
+    margin-left: 0%;
+    flex-direction: column;
+    margin: 0 auto;
+    margin: 0;
+    font-size: 12px;
+    flex: 1;
+    z-index: 5;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 /*   footer p {
     margin: 0;
     left: 2px;
@@ -55,10 +58,11 @@ footer {
 
   
   .container-textrod{
-    width: 15vh;
-/*     background-color: aqua;  */
+
+    
+    width:20vh;
+    /* background-color: aqua;  */
     display: block;
-    margin-right: 3px;
   }
 
   .textrod{
@@ -66,7 +70,7 @@ footer {
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-48%, -50%);
+    transform: translate(-50%, -50%);
     margin: 0;
     font-size: 10px;
     flex: 1;
@@ -90,13 +94,12 @@ footer {
   @media screen and (max-width: 490px) {
     .container-rodape {
       top: -20px;
-      margin: 0;
       left: 2px;
 
     }
-    .rodape-text {
+/*     .rodape-text {
       width: 80%;
-    }
+    } */
     .textrod{
       font-size: 60%;
       margin-left: 4px;
