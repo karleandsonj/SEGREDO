@@ -19,6 +19,7 @@ footer {
     height: 10vh;
     display: flex;
     right: 0;
+    cursor: pointer;
   }
   
   .container-rodape {

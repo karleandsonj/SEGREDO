@@ -312,6 +312,15 @@ hr {
 
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
+/* 
+  .menu-items {
+    display: none;
+  }
+  
+  .menu-items.show-menu {
+    display: block;
+  } */
+
   .menuE,
   .menuK{
     top: 10px;
@@ -360,7 +369,12 @@ hr {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
+
+/*   .menu:hover .navicon {
+    display: block;
+  }
+   */
 
   nav.navicon:hover {
     -webkit-transition-timing-function: ease-out;
