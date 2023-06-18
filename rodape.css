@@ -16,7 +16,7 @@ footer {
   
   .qrcode {
     position: relative;
-    height: 5vw;
+    height: 10vh;
     display: flex;
     right: 0;
   }
