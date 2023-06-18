@@ -72,8 +72,8 @@ body.fade-in {
 
  @media screen and (max-width: 768px) {
   .map{
-    height: 30vh;
-    width: 40vh;
+    height: 35vh;
+    width: 90%;
     display: flex;
     top: 150px;
     display: grid;
