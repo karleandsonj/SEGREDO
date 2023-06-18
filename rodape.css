@@ -1,6 +1,6 @@
 footer {
     background-color: #f2f2f2;
-    padding: 3px;
+    padding: 5px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -16,8 +16,9 @@ footer {
   
   .qrcode {
     position: relative;
-    height: 10vh;
+    height: 5vw;
     display: flex;
+    right: 0;
   }
   
   .container-rodape {
@@ -27,7 +28,7 @@ footer {
     flex-direction: column;
     margin-left: 0%;
     margin-top: 1.5%;
-    /* min-height: 100vh; */
+    /* m-height: 20% ;  */
     /* Garante que o container ocupe pelo menos a altura total da tela */
   }
   
@@ -67,3 +68,13 @@ footer {
     }
   }
   
+/*   .pix1 {
+    display:flex;
+    text-align: center;
+    margin-top: 13%;
+    margin-right: 10px; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 75%; 
+    flex: 1;
+    position:sticky;
+  } */
