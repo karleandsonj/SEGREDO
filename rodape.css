@@ -15,10 +15,15 @@ footer {
   }
   
   .qrcode {
-    position: relative;
-    height: 10vh;
+/*     background-color: aqua; */
+    width: 12vh;
     display: flex;
-    right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .qrcode1 {
+    height: 12vh;
     cursor: pointer;
   }
   
@@ -50,8 +55,8 @@ footer {
 
   
   .container-textrod{
-    width: 11vh;
-    /* background-color: aqua; */
+    width: 15vh;
+/*     background-color: aqua;  */
     display: block;
     margin-right: 3px;
   }
@@ -61,12 +66,18 @@ footer {
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-48%, -50%);
     margin: 0;
     font-size: 10px;
     flex: 1;
   }
 
+  @media screen and (min-width: 490px) {
+    .container-textrod {
+      margin: 0px;
+    }
+
+  }
   
   
   @media screen and (max-width: 768px) {
@@ -81,14 +92,20 @@ footer {
       top: -20px;
       margin: 0;
       left: 2px;
-      font-size: 70%;
+      font-size: 80%;
     }
     .rodape-text {
       width: 80%;
     }
     .textrod{
-      font-size: 60%;
+      font-size: 80%;
+      margin-left: 4px;
     }
+  }
+
+  @media screen and (max-width: 375px) {
+
+
   }
   
   @media screen and (max-width: 375px) {
@@ -102,11 +119,7 @@ footer {
     }
 
     .textrod{
-      font-size: 50%;
-      top: 4vh;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
+      font-size: 80%;
     }
   }
   
