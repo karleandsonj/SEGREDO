@@ -23,32 +23,61 @@ footer {
   }
   
   .container-rodape {
-    max-width: 1200px;
+    /* background-color: aqua; */
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin-left: 0%;
-    margin-top: 1.5%;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: flex-start; /* Alinha à esquerda */
+    /* margin-top: 1.5%; */
     /* m-height: 20% ;  */
     /* Garante que o container ocupe pelo menos a altura total da tela */
-  }
-  
-  footer p {
     margin: 0;
     left: 2px;
     font-size: 12px;
     flex: 1;
   }
   
+/*   footer p {
+    margin: 0;
+    left: 2px;
+    font-size: 12px;
+    flex: 1;
+  } */
+
+  
+  .container-textrod{
+    width: 11vh;
+    /* background-color: aqua; */
+    display: block;
+    margin-right: 3px;
+  }
+
+  .textrod{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 10px;
+    flex: 1;
+  }
+
+  
   
   @media screen and (max-width: 768px) {
-    footer p {
+    .container-rodape {
       font-size: 80%;
     }
+
   }
   
   @media screen and (max-width: 490px) {
-    footer p {
+    .container-rodape {
       top: -20px;
       margin: 0;
       left: 2px;
@@ -56,16 +85,27 @@ footer {
     .rodape-text {
       width: 80%;
     }
+    .textrod{
+      font-size: 60%;
+    }
   }
   
   @media screen and (max-width: 375px) {
     footer {
       padding: 5px;
     }
-    footer p {
+    .container-rodape {
       top: -20px;
-      font-size: 75%;
+      font-size: 90%;
       margin-left: 0;
+    }
+
+    .textrod{
+      font-size: 50%;
+      top: 4vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
     }
   }
   
