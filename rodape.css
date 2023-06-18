@@ -28,7 +28,7 @@ footer {
   }
   
   .container-rodape {
-    /* background-color: aqua; */
+    /* background-color: aqua;  */
     width: 100vw;
     margin: 0 auto;
     display: flex;
@@ -82,7 +82,7 @@ footer {
   
   @media screen and (max-width: 768px) {
     .container-rodape {
-      font-size: 80%;
+      font-size: 65%;
     }
 
   }
@@ -92,13 +92,13 @@ footer {
       top: -20px;
       margin: 0;
       left: 2px;
-      font-size: 80%;
+
     }
     .rodape-text {
       width: 80%;
     }
     .textrod{
-      font-size: 80%;
+      font-size: 60%;
       margin-left: 4px;
     }
   }
@@ -114,12 +114,12 @@ footer {
     }
     .container-rodape {
       top: -20px;
-      font-size: 90%;
+      font-size: 55%;
       margin-left: 0;
     }
 
     .textrod{
-      font-size: 80%;
+      font-size: 50%;
     }
   }
   
