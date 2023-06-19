@@ -1,7 +1,9 @@
 const addloading = () => {
   const load = document.querySelector('#load');
-  load.innerHTML = '<img src="fotos/load.gif" alt="GIF animado" id="">';
+  load.innerHTML = '<div class="container">   <div class="preloader">     <span></span>     <span></span>     <span></span>   </div>   <div class="shadow"></div> </div>'/* '<img src="fotos/load.gif" alt="GIF animado" id="">' */;
 }
+
+/* addloading (); */
 
 const removeloading = () => {
   const alerta = document.querySelector('#alerta');
