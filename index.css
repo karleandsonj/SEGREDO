@@ -111,3 +111,37 @@ body.fade-in {
     }
   } 
 
+/* CONTAGEM REGRESSIVA */
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.timer {
+  color: aliceblue;
+  margin: 0 10px;
+  text-align: center;
+  z-index: 8;
+  display: block;
+  margin-top: 50px;
+}
+
+.text {
+  color: aliceblue;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+  
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+}
