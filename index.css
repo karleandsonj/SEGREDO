@@ -9,6 +9,8 @@ body {
 	background-color: hsla(261, 100%, 61%, 0.514);
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
   .imagem_karleeve {
@@ -26,8 +28,9 @@ body {
   
   } 
 
-
-/* Texto Titulo */
+/* TEXTO K & E */
+  /* Texto Titulo */
+  /* Texto Titulo */
 h1.K {
   right: -50%;
   font-size: 90px;
@@ -60,6 +63,7 @@ h1 {
   height: min-content;
   overflow: hidden;
 }
+  
 
 
 body {
@@ -74,18 +78,23 @@ body.fade-in {
   visibility: visible;
   transition: opacity 0.5s ease-in-out;
 }
+
+
+
 @media screen and (max-width: 768px) {
-  .titulo {
-    font-size: 70%;
-    display:block;
-  }
   .imagem_karleeve{
     top:110px;
     width: 90vw;
     height:55vw;
-
   }
-  
+
+/*   #countdown{
+    display: grid;
+    justify-content: end;
+    justify-items: center;
+    align-items: end;
+  } */
+
   .E,
   .K{
     display: none;
@@ -98,7 +107,7 @@ body.fade-in {
       width: 50vw;
       display: flex;
       top: 100px;
-      display: grid;
+      display: flex;
       z-index: 1;
     }
     .E{
@@ -113,35 +122,64 @@ body.fade-in {
 
 /* CONTAGEM REGRESSIVA */
 
-#countdown {
+
+#countdown{
+/*   background-color:aqua ; */
   display: flex;
   justify-content: center;
-  
+  align-items: center;
+  top: 100px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  position:relative;
+  margin: 0;
+  width: 100vw;
+  height: 100vw;
 }
-
 .timer {
-  color: aliceblue;
+  color: rgb(0, 136, 255);
+  z-index: 8;
+  display: grid;
   margin: 0 10px;
   text-align: center;
-  z-index: 8;
-  display: block;
-  margin-top: 50px;
 }
 
 .text {
-  color: aliceblue;
-  display: block;
-  font-size: 14px;
+  color: rgb(0, 138, 34);
+  display:grid;
+  font-size: 2vh;  
+  border-radius: 1px solid black;
   margin-top: 5px;
-  
 }
 
 #days,
 #hours,
 #minutes,
 #seconds {
-  display: block;
-  font-size: 48px;
+  display: grid;
+  font-size: 5vh;
   font-weight: bold;
-  color: #ffffff;
+  color: rgb(51, 255, 0);
 }
+
+
+/* @media screen and (max-width: 763) {
+  #countdown {
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    position: relative;
+    margin: 0;
+  }
+}  */
+
+/*   @media screen and (max-width: 767px){
+    #countdown{
+      margin-top: 500px;
+    }
+  }
