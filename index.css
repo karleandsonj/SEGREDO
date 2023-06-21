@@ -29,42 +29,40 @@ body {
   } 
 
 /* TEXTO K & E */
-  /* Texto Titulo */
-  /* Texto Titulo */
 h1.K {
-  right: -50%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 90px;
   top: 60px;
   font-family: 'Great Vibes', cursive;
   transform: rotate(20deg);
-  position: fixed;
+  position: absolute;
 }
 
 h1.E {
-  left: -50%;
-  float: left;
+  right: 50%;
+  transform: translateX(50%);
   font-size: 90px;
   top: 60px;
   font-family: 'Great Vibes', cursive;
   transform: rotate(-20deg);
-  position: fixed;
+  position: absolute;
 }
 
 h1 {
   font-size: 50px;
   color: #7c0000;
-  text-align-last: center;
-  position: fixed;
+  text-align: center;
   z-index: 1;
   top: 300px;
   bottom: 0;
   left: 0;
   right: 0;
-  height: min-content;
+  height: max-content;
   overflow: hidden;
 }
-  
 
+  
 
 body {
   opacity: 0;
@@ -119,67 +117,3 @@ body.fade-in {
       z-index: 2;
     }
   } 
-
-/* CONTAGEM REGRESSIVA */
-
-
-#countdown{
-/*   background-color:aqua ; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 100px;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 8;
-  position:relative;
-  margin: 0;
-  width: 100vw;
-  height: 100vw;
-}
-.timer {
-  color: rgb(0, 136, 255);
-  z-index: 8;
-  display: grid;
-  margin: 0 10px;
-  text-align: center;
-}
-
-.text {
-  color: rgb(0, 138, 34);
-  display:grid;
-  font-size: 2vh;  
-  border-radius: 1px solid black;
-  margin-top: 5px;
-}
-
-#days,
-#hours,
-#minutes,
-#seconds {
-  display: grid;
-  font-size: 5vh;
-  font-weight: bold;
-  color: rgb(51, 255, 0);
-}
-
-
-/* @media screen and (max-width: 763) {
-  #countdown {
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 8;
-    position: relative;
-    margin: 0;
-  }
-}  */
-
-/*   @media screen and (max-width: 767px){
-    #countdown{
-      margin-top: 500px;
-    }
-  }
