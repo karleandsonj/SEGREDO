@@ -309,23 +309,12 @@ hr {
 /* SANDUBA */
 
 @media screen and (max-width: 767px) {
-
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
-
-/* 
-  .menu-items {
-    display: none;
-  }
-  
-  .menu-items.show-menu {
-    display: block;
-  } */
 
   .menuE,
   .menuK{
     top: 10px;
     color: #7c0000;
-    
   }
 
   .menuE {
@@ -334,7 +323,6 @@ hr {
     font-size: 50px;
     font-family: 'Great Vibes', cursive;
     background-color: #ffffff;
-    
   }
   
   .menuK {
@@ -346,12 +334,6 @@ hr {
     text-align: end;
   }
 
-/*   .navicon1{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  } */
-  
   nav.navicon {
     position: absolute;
     width: 300px;
@@ -370,12 +352,6 @@ hr {
     transform: translateX(-50%);
   }
 
-
-/*   .menu:hover .navicon {
-    display: block;
-  }
-   */
-
   nav.navicon:hover {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
@@ -384,8 +360,6 @@ hr {
     -webkit-clip-path: circle(390px at 225px 24px);
     clip-path: circle(390px at 150px 24px);
   }
-
-
 
   a.nava {
     display: block;
@@ -404,40 +378,99 @@ hr {
     font-style: normal;
     color: #ff28ad;
     text-decoration: none;
-    
   }
 
-  a.nava:hover { background: #ff82e0; border: 2px solid #850063; color: #eaeaea; }
+  a.nava:hover { 
+    background: #ff82e0; 
+    border: 2px solid #850063; 
+    color: #eaeaea; 
+  }
 
-  a.nava:active { background: #ff28ad; }
+  a.nava:active { 
+    background: #ff28ad; 
+  }
 
   .navicon1 {
     position: relative;
-    padding: 55px 50px;
+    padding: 55px 60px;
     cursor: pointer;
   }
 
-/*    .navicon1 div {
-    position:absolute;
-    width: 20px;
-    height: 2px;
-    top: 20px;
-  }  */
-
-  .navicon1 div:before,
+/*   .navicon1 div:before,
   .navicon1 div:after {
     display: block;
     content: "";
+    margin-top: 50px;
     width: 20px;
     height: 2px;
     background: rgba(0, 0, 0, 0.87);
     position: absolute;
+  } */
+
+  .navicon1 div:before { 
+    top: -7px; 
   }
 
-  .navicon1 div:before { top: -7px; }
+  .navicon1 div:after { 
+    top: 7px; 
+  }
 
-  .navicon1 div:after { top: 7px; }
+  @keyframes grow {
+    0% {
+      transform: scale(0.1);
+      border-width: 2px;
+    }
+    10% {
+      transform: scale(0.2);
+      border-width: 2px;
+    }
+    20% {
+      transform: scale(0.3);
+      border-width: 2px;
+    }
+    30% {
+      transform: scale(0.4);
+      border-width: 2px;
+    }
+    40% {
+      transform: scale(0.5);
+      border-width: 2px;
+    }
+    50% {
+      transform: scale(0.6);
+      border-width: 2px;
+    }
+    60% {
+      transform: scale(0.7);
+      border-width: 2px;
+    }
+    70% {
+      transform: scale(0.8);
+      border-width: 2px;
+    }
+    80% {
+      transform: scale(0.9);
+      border-width: 2px;
+    }
+    90% {
+      transform: scale(1);
+      border-width: 2px;
+    }
+    100% {
+      transform: scale(1);
+      border-width: 2px;
+    }
+  }
+  
+  nav.navicon:hover .navicon1 {
+    margin-top: -4px;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    animation: grow 1s linear infinite;
+  }
+  
 }
+
 
 @media screen and (max-width: 360px) {
   .menuE,

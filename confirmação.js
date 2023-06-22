@@ -7,7 +7,7 @@ const addloading = () => {
 
 const removeloading = () => {
   const alerta = document.querySelector('#alerta');
-  alerta.innerHTML = '<div class="d-flex justify-content-center mt-5 h-100"> <div class="d-flex align-items-center align-self-center card p-3 text-center cookies"><img src="https://i.pinimg.com/originals/a1/cd/2e/a1cd2e4a82bf9407d751f02f81baf257.png" width="50" class="core"><span class="mt-2"><b>Confirmação Feita com sucesso</b></span><button class="btn btn-dark mt-3 px-4" type="button" id="reloadButton">✔️</button> </div> </div>';
+  alerta.innerHTML = '<div class="d-flex justify-content-center mt-5 h-100"> <div class="d-flex align-items-center align-self-center card p-3 text-center cookies"><img src="https://i.pinimg.com/originals/a1/cd/2e/a1cd2e4a82bf9407d751f02f81baf257.png" width="50" class="core"><span class="mt-2"><b>Confirmação Feita com sucesso</b></span>  <span class="justify"> <b>Convite será enviado para seu email e WhatsApp. <br> <i>aguarde!</i></br></span><button class="btn btn-dark mt-3 px-4" type="button" id="reloadButton">✔️</button> </div> </div> ';
 
   const reloadButton = document.querySelector('#reloadButton');
   reloadButton.addEventListener('click', function() {
@@ -16,8 +16,8 @@ const removeloading = () => {
 
 }
 
-
-/* removeloading(); */
+/* 
+removeloading(); */
   
 const handleSubmit = (event) => {
   event.preventDefault();

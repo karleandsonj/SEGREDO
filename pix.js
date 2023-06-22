@@ -14,6 +14,10 @@ myImage.addEventListener('click', function() {
 });
 
 function showNotification(title, message) {
+  alert(title + "\n" + message);
+}
+
+/* function showNotification(title, message) {
   if (Notification.permission === 'granted') {
     new Notification(title, { body: message });
   } else if (Notification.permission !== 'denied') {
@@ -23,4 +27,4 @@ function showNotification(title, message) {
       }
     });
   }
-}
+} */
