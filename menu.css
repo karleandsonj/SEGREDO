@@ -345,8 +345,6 @@ hr {
 
   nav.navicon {
     position: fixed;
-/*     width: 170px;
-    height: 180px; */
     background: rgba(255, 255, 255, 0);
     color: rgba(0, 0, 0, 0.87);
     -webkit-clip-path: circle(20px at 30px 30px);
@@ -357,7 +355,8 @@ hr {
     display: grid;
     left:50%;
     transform: translateX(-50%);
-    top: -0px;
+    top: 0;
+    cursor: pointer;
   }
 
   nav.navicon:hover {
@@ -368,8 +367,6 @@ hr {
     -webkit-clip-path: circle(390px at 225px 24px);
     clip-path: circle(500px at 100px 80px);
   }
-
-
 
   a.nava {
     height: 50px;
@@ -407,7 +404,7 @@ hr {
     }
   } */
 
-  a.nava:hover { 
+  a.nava:hover, a.nava:focus { 
     background: #ff82e0; 
     border: 1px solid #850063; 
     color: #eaeaea; 
@@ -420,7 +417,14 @@ hr {
     background: #ff28ad; 
     border-radius: 10px;
     z-index: 20;
+    cursor: pointer;
   }
+/*   
+  a.nava:active, a.nava:focus {
+    background: #ff28ad;
+    border-radius: 10px;
+    z-index: 20;
+  } */
 
   .navicon1{
     padding: 63px 55px;
