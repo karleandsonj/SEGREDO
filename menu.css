@@ -251,7 +251,11 @@ li:hover .lineTop2:after {
   background-color:#ff9696; 
 }
 }
- /*768PX BREAKPOINT*/
+ /* seleção */
+
+ .menu-horizontal li a.selected{
+  background-color: #850063;
+ }
 
 
  /* LOGO */
@@ -299,14 +303,14 @@ hr {
   align-items: center;
 }
 
+/* SANDUBA */
+
 @media screen and (min-width: 767px) {
   .menuE,
   .menuK{
     display: none;
   }
 }
-
-/* SANDUBA */
 
 @media screen and (max-width: 767px) {
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
@@ -413,7 +417,7 @@ hr {
   }
 
 
-  a.nava:active { 
+  a.navicon1::selection { 
     background: #ff28ad; 
     border-radius: 10px;
     z-index: 20;
@@ -527,3 +531,12 @@ hr {
     top: 20px;
   } 
 }*/
+
+
+.menu-horizontal > li a:hover, .menu-horizontal > li a:focus {
+  background-color: #7c0000;
+}
+
+.menu-horizontal > li a {
+  background-color: transparent;
+}

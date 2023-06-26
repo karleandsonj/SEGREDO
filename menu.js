@@ -1,6 +1,11 @@
-const navicon = document.querySelector('.navicon');
+function selecionarItem(event) {
+  // Remove a classe 'selected' de todos os links
+  var links = document.querySelectorAll('.menu-horizontal li a');
+  links.forEach(function(link) {
+    link.classList.remove('selected');
+  });
 
-navicon.addEventListener('click', function() {
-  // Adicione o código que deseja executar quando o elemento for clicado
-  console.log('Elemento clicado!');
-});
+  // Adiciona a classe 'selected' ao link clicado
+  var linkClicado = event.target;
+  linkClicado.classList.add('selected');
+}
