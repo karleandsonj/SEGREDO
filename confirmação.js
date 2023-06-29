@@ -1,3 +1,25 @@
+const telefoneInput = document.getElementById('telefone');
+
+telefoneInput.addEventListener('input', formatarTelefone);
+
+function formatarTelefone() {
+  const telefone = telefoneInput.value;
+
+  // Remove todos os caracteres não numéricos
+  const numeroLimpo = telefone.replace(/\D/g, '');
+
+  // Verifica se há pelo menos 2 dígitos no número
+  if (numeroLimpo.length >= 3) {
+    // Formata o número colocando parênteses nos dois primeiros dígitos
+    const numeroFormatado = `(${numeroLimpo.substring(0, 2)})${numeroLimpo.substring(2)}`;
+
+    // Atualiza o valor do campo de entrada com o número formatado
+    telefoneInput.value = numeroFormatado;
+  }
+
+  
+}
+
 const addloading = () => {
   const load = document.querySelector('#load');
   load.innerHTML = '<div class="container">   <div class="preloader">     <span></span>     <span></span>     <span></span>   </div>   <div class="shadow"></div> </div>'/* '<img src="fotos/load.gif" alt="GIF animado" id="">' */;
@@ -26,6 +48,7 @@ const handleSubmit = (event) => {
   const name = document.querySelector('input[name=name]').value;
   const Presentes = document.querySelector('select[name=Presentes]').value;
   const email = document.querySelector('input[name=email]').value;
+  const telefone = document.querySelector('input[name=telefone]').value;
   const presença = document.querySelector('input[name=presença]').value;
 
   fetch('https://api.sheetmonkey.io/form/wnxVCxtKEARrR36z6kd5kM', {
@@ -34,7 +57,7 @@ const handleSubmit = (event) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ name, Presentes, email, presença }),
+    body: JSON.stringify({ name, Presentes, email, telefone, presença }),
   }).then(() => {
     removeloading();
   })/* .then(() => {
@@ -50,6 +73,10 @@ const handleSubmit = (event) => {
 
 
 document.querySelector('form').addEventListener('submit', handleSubmit);/* location.reload(true); */
+
+
+
+
 
 
   

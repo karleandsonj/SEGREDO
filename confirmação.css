@@ -35,12 +35,13 @@
       }
             
       label {
-        margin-top: 1rem;
+        margin-top: 0.7rem;
         font-weight: bold;
       }
       
       input[type="text"],
-      input[id="email"]{
+      input[id="email"],
+      input[id="telefone"]{
         margin: 0.5rem;
         padding: 0.5rem;
         border-radius: 0.25rem;
