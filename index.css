@@ -14,28 +14,45 @@ body {
 }
 
   .imagem_karleeve {
+    z-index: -5;
     border-radius: 5%;
     border:solid 5px rgb(251, 144, 255);
     display:flex;
     top: 130px;
     margin: auto;
     position:relative;
-    width: 0 50VW;
+/*     width: 50vw; */
     height: 65vh;
 /*     justify-content: center;
     text-align: center; */
-    justify-items: center;
-  
+/*     justify-items: center; */
   } 
 
 /* TEXTO K & E */
+
+/* .titulo1{
+  background-color: aqua;
+  left: 0;
+  display: flex;
+} */
+
+.titulo2{
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  height: 100vh;
+  width: 50vw;
+/*   background-color: #f1f1f1; */
+  padding: 10px;
+  margin: 0;
+/*   z-index: 1; */
+}
+
 h1.K {
   left: 50%;
   font-size: 90px;
-  top: 60px;
   font-family: 'Great Vibes', cursive;
   transform: rotate(20deg);
-  position:absolute;
 }
 
 h1.E {
@@ -114,3 +131,4 @@ body.fade-in {
       z-index: 2;
     } */
   } 
+

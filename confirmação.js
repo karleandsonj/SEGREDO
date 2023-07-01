@@ -11,13 +11,21 @@ function formatarTelefone() {
   // Verifica se há pelo menos 2 dígitos no número
   if (numeroLimpo.length >= 3) {
     // Formata o número colocando parênteses nos dois primeiros dígitos
-    const numeroFormatado = `(${numeroLimpo.substring(0, 2)})${numeroLimpo.substring(2)}`;
+    let numeroFormatado = `(${numeroLimpo.substring(0, 2)})`;
+
+    // Adiciona um espaço no terceiro número
+    if (numeroLimpo.length >= 3) {
+      numeroFormatado += ` ${numeroLimpo.substring(2, 3)}`;
+    }
+
+    // Adiciona o restante dos números e o traço depois do sétimo número
+    if (numeroLimpo.length >= 4) {
+      numeroFormatado += `${numeroLimpo.substring(3, 7)}-${numeroLimpo.substring(7)}`;
+    }
 
     // Atualiza o valor do campo de entrada com o número formatado
     telefoneInput.value = numeroFormatado;
   }
-
-  
 }
 
 const addloading = () => {
@@ -60,23 +68,6 @@ const handleSubmit = (event) => {
     body: JSON.stringify({ name, Presentes, email, telefone, presença }),
   }).then(() => {
     removeloading();
-  })/* .then(() => {
-    setTimeout(() => {
-      location.reload(true);
-    }, 1000);
-  }) */;
+  });
 }
-
-/* const handleSubmit1= (event) => {
-  setTimeout(() => {
-    location.reload(true)}, 1000);} */
-
-
 document.querySelector('form').addEventListener('submit', handleSubmit);/* location.reload(true); */
-
-/*  */
-
-
-
-
-  

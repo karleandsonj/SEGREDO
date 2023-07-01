@@ -2,14 +2,25 @@
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box ;
-    }
+
+  }
+
+.name,
+.email,
+.telefone{
+  text-align: center;
+}
 
     .container1{
       position:relative ;
       top: 20px;
+      
     }
-
-/*  */
+/* 
+    .scroll{
+      overflow:auto;
+      height: 100vh 0;
+    } */
 
     body {
         font-family: Arial, Helvetica, sans-serif;
@@ -25,7 +36,6 @@
         top:80px;
         z-index: 2;
         text-align: center;
-
       }
 
       header {
@@ -82,7 +92,6 @@
         color: #8C82FC;
         border-radius: 40px;
         cursor: pointer;
-        overflow: hidden;
         transition: all .35s;
         text-decoration: none; /* Remover sublinhado */
         

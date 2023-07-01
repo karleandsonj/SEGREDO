@@ -1,5 +1,6 @@
 body {
   margin-bottom: 60px; /* Adiciona uma margem inferior para criar espaço para o rodapé */
+
 }
 
 footer {
@@ -34,16 +35,14 @@ footer {
   .container-rodape {
     /* background-color: rgb(246, 255, 162);  */
     width: 100%;
-    
+
   }
   
   .rodape-text{
-    left: 2px;
     display: flex;
     margin-left: 0%;
     flex-direction: column;
-    margin: 0 auto;
-    margin: 0;
+    margin: 0 5px;
     font-size: 12px;
     flex: 1;
     z-index: 5;
