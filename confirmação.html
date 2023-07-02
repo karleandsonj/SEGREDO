@@ -40,12 +40,12 @@
 		</nav>
 		</header>
 	<div class="scroll">
-<!-- 				<div id="alerta">
+				<div id="alerta">
 					
 				</div>
 				<div class="load" id="load">
-					<img src="fotos/load.gif" alt="GIF animado" id=""> 
-				</div> -->
+					<!-- <img src="fotos/load.gif" alt="GIF animado" id="">  -->
+				</div>
 			<div class="container1">
 				<form>
 					<label for="name">
@@ -56,13 +56,15 @@
 					<label for="Presentes" id="press" >
 						<span class="pres1" >Presentes:</span>
 						<select name="Presentes" class="Presentes12" id="select">
-							<option>NENHUM</option>
-							<option>TV</option>
-							<option>GELADEIRA</option>
-							<option>CAMA</option>
-							<option>MESA</option>
-							<option>TALHERES</option>
-							<option>PRATOS</option>
+							<div class="presentes1">
+								<option>NENHUM</option>
+								<option>TV</option>
+								<option>GELADEIRA</option>
+								<option>CAMA</option>
+								<option>MESA</option>
+								<option>TALHERES</option>
+								<option>PRATOS</option>
+							</div>
 						</select>
 					</label>
 
@@ -73,7 +75,7 @@
 
 					<label for="telefone">
 						<span>Telefone:</span>
-						<input type="tel" id="telefone" class="telefone" name="telefone" pattern="[0-9][()]{15}" maxlength="15" placeholder="(99) 99999-9999" required>
+						<input type="tel" id="telefone" class="telefone" name="telefone" pattern="[0-9][()][-]{15}" maxlength="15" placeholder="(99) 99999-9999" required>
 					</label>
 
 

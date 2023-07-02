@@ -33,7 +33,7 @@ const addloading = () => {
   load.innerHTML = '<div class="container">   <div class="preloader">     <span></span>     <span></span>     <span></span>   </div>   <div class="shadow"></div> </div>'/* '<img src="fotos/load.gif" alt="GIF animado" id="">' */;
 }
 
-/* addloading (); */
+// addloading ();
 
 const removeloading = () => {
   const alerta = document.querySelector('#alerta');
@@ -46,8 +46,7 @@ const removeloading = () => {
 
 }
 
-/* 
-removeloading(); */
+// removeloading(); 
   
 const handleSubmit = (event) => {
   event.preventDefault();
