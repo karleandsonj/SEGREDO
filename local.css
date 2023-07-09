@@ -27,8 +27,8 @@ body.fade-in {
   top: 150px;
   margin: auto;
   position:relative;
-  width: 20VW;
-  height: 50vh;
+  width: 18%;
+/*   height: 50%; */
   justify-content: center;
   text-align: center;
   justify-items: center;
@@ -40,8 +40,8 @@ body.fade-in {
   top: -5px;
   margin: auto;
   position:relative;
-  width: 50VW;
-  height: 50vh;
+  width: 200%;
+  height: 100%;
   justify-content: center;
   text-align: center;
   justify-items: center;
@@ -72,8 +72,8 @@ body.fade-in {
 
  @media screen and (max-width: 768px) {
   .map{
-    height: 30vw;
-    width: 90%;
+    height: 30%;
+    width: 50%;
     display: flex;
     top: 150px;
     display: grid;
@@ -82,7 +82,7 @@ body.fade-in {
 
   .img{
     width: 100%;
-    height: 100%;
+    height:100%;
     display: flex;
     top: 0px;
     z-index: 1;
