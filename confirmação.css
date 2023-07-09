@@ -2,8 +2,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box ;
-
   }
+
+body{
+  height: 100%;
+  margin: 0;
+}
+
 
 .name,
 .email,
@@ -12,14 +17,18 @@
 }
 
     .container1{
-      position:relative ;
-      top: 20px;
-      
+      margin-top: 20px;
+      margin-bottom: 60px; /* Adicione uma margem inferior para criar espaço para o footer */
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 960px; /* Ajuste o valor conforme necessário */
+      padding-left: 20px;
+      padding-right: 20px;
     }
-/* 
-    .scroll{
-      overflow:auto;
-      height: 100vh 0;
+
+/*     .scroll{
+      background-color: #0069d9;
+      min-height: 100vh;
     } */
 
     body {
@@ -36,6 +45,8 @@
         top:80px;
         z-index: 2;
         text-align: center;
+        min-height: 70vh;
+/*         overflow-y: auto; */
       }
 
       header {
