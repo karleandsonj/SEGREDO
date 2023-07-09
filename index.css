@@ -1,5 +1,5 @@
  * {
-	margin: 0;
+	margin:  0;
 	padding: 0;
 	box-sizing: border-box;
     }
@@ -120,7 +120,6 @@ body.fade-in {
       width: 50vw;
       top: 100px;
       display: flex;
-      z-index: 1;
     }
 /*     .E{
       margin-right: 100px;

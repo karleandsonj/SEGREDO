@@ -72,12 +72,11 @@ body.fade-in {
 
  @media screen and (max-width: 768px) {
   .map{
-    height: 30%;
-    width: 50%;
+    height: 20%;
+    width: 60%;
     display: flex;
     top: 150px;
     display: grid;
-    z-index: 1;
   }
 
   .img{
@@ -85,7 +84,6 @@ body.fade-in {
     height:100%;
     display: flex;
     top: 0px;
-    z-index: 1;
   }
 } 
 
