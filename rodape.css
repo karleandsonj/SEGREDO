@@ -1,8 +1,3 @@
-body {
-/*   margin-bottom: 60px;  */
-  overflow-y: auto;
-}
-
 footer {
     background-color: #ffffff;
     padding: 5px;
@@ -10,7 +5,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    z-index: 20;
+    z-index:0;
     display: flex;
     flex: 0;
     /* border-top: 1px solid rgb(0, 0, 0); */
@@ -25,10 +20,10 @@ footer {
 }
 
 .content1{
+  overflow:auto;
   padding-bottom: 20px;
 /*   background-color: aqua; */
   max-height: calc( 100vh - 80px); /* Altura máxima menos a altura do footer */
-  overflow-y: scroll;
 }
   
   .qrcode {
