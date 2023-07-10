@@ -1,0 +1,133 @@
+ * {
+	margin:  0;
+	padding: 0;
+	box-sizing: border-box;
+    }
+/*CORPO*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: hsla(261, 100%, 61%, 0.514);
+/*   background-size: cover; */
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+  .imagem_karleeve {
+    z-index: -5;
+    border-radius: 5%;
+    border:solid 5px rgb(251, 144, 255);
+    display:flex;
+    top: 130px;
+    margin: auto;
+    position:relative;
+/*     width: 50vw; */
+    height: 65vh;
+/*     justify-content: center;
+    text-align: center; */
+/*     justify-items: center; */
+  } 
+
+/* TEXTO K & E */
+
+/* .titulo1{
+  background-color: aqua;
+  left: 0;
+  display: flex;
+} */
+
+.titulo2{
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  height: 100vh;
+  width: 50vw;
+/*   background-color: #f1f1f1; */
+  padding: 10px;
+  margin: 0;
+/*   z-index: 1; */
+}
+
+h1.K {
+  left: 50%;
+  font-size: 90px;
+  font-family: 'Great Vibes', cursive;
+  transform: rotate(20deg);
+}
+
+h1.E {
+  right: 50%;
+  font-size: 90px;
+  top: 60px;
+  font-family: 'Great Vibes', cursive;
+  transform: rotate(-20deg);
+  position: absolute;
+}
+
+h1 {
+  font-size: 50px;
+  color: #7c0000;
+  text-align: center;
+  z-index: 1;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: max-content;
+  overflow: hidden;
+}
+
+  
+
+body {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 100%;
+}
+
+/* Configuração da transição */
+body.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .imagem_karleeve{
+    top:110px;
+    width: 90vw;
+    height:55vw;
+  }
+
+/*   #countdown{
+    display: grid;
+    justify-content: end;
+    justify-items: center;
+    align-items: end;
+  } */
+
+  .E,
+  .K{
+    display: none;
+  }
+  }
+
+  @media screen and (max-height: 450px) {
+    .imagem_karleeve{
+      height: 60vh;
+      width: 50vw;
+      top: 100px;
+      display: flex;
+    }
+/*     .E{
+      margin-right: 100px;
+      z-index: 2;
+    }
+    .K{
+      margin-left: 100px;
+      z-index: 2;
+    } */
+  } 
+

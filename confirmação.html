@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Confirmação</title>
+    <link rel="stylesheet" type="text/css" href="confirmação.css">
+	<link rel="stylesheet" type="text/css" href="menu.css">
+	<link rel="stylesheet" type="text/css" href="rodape.css">
+</head>
+<body>
+	<div class="scroll">
+		<div class="content1">
+			<header>
+				<nav  id="menu"> 	
+					<div class="ci"></div>               
+					<div class="logo"> 
+						<img class="logo1" src="fotos/logo.png" alt=""> 
+					</div>
+					<nav class="navicon">
+						<div class="navicon1">
+						<div></div>
+						</div>
+					
+						<a class="nava" href="index.html" > INICIO &#x1F3E0;</a>
+						<a class="nava" href="Local.html" >LOCAL &#x1F4CD;</a>
+						<a class="nava" href="confirmação.html"> CONFIRMAÇÃO &#x2705;</a>
+						<a class="nava" href="Lista.html" > PRESENTES &#x1F381;</a>
+					
+					</nav>     
+					<nav class="menu-horizontal">
+						<ul class="topnav" >
+							<h2 class="menuE">Evelyn</h2>
+							<h2 class="menuK">Karl</h2>
+							<li class="l1"><a href="index.html" class="lineTop1"> <span> Inicio &#x1F3E0;</span> </a></li>
+							<li class="l2"><a href="Local.html" class="lineTop1"> <span> Local &#x1F4CD;</span></a></li>
+							<hr>
+							<li class="l3"><a href="confirmação.html" class="lineTop2"> <span> Confirmação &#x2705; </span></a></li>
+							<li class="l4"><a href="Lista.html" class="lineTop2"> <span> Presentes &#x1F381;</span></a></li>
+						</ul>
+					</nav>
+				</nav>
+				</header>
+
+				<div id="alerta">
+					
+				</div>
+				<div class="load" id="load">
+					<!-- <img src="fotos/load.gif" alt="GIF animado" id="">  -->
+				</div>
+			<div class="container1">
+				<form>
+					<label for="name">
+						<span>Nome:</span> 
+						<input type="text" id="name" class= "name" name="name" placeholder="Digite Seu Nome" required>
+					</label>
+
+					<label for="Presentes" id="press" >
+						<span class="pres1" >Presentes:</span>
+						<select name="Presentes" class="Presentes12" id="select">
+							<div class="presentes1">
+								<option>NENHUM</option>
+								<option>TV</option>
+								<option>GELADEIRA</option>
+								<option>CAMA</option>
+								<option>MESA</option>
+								<option>TALHERES</option>
+								<option>PRATOS</option>
+							</div>
+						</select>
+					</label>
+
+					<label for="email">
+						<span>E-mail:</span>
+						<input type="email" id="email" class= "email" name="email" placeholder="exemplo@email.com">
+					</label>
+
+					<label for="telefone">
+						<span>Telefone:</span>
+						<input type="tel" id="telefone" class="telefone" name="telefone" pattern="[0-9][()][-]{15}" maxlength="15" placeholder="(99) 99999-9999" required>
+					</label>
+
+
+
+					<label for="presença">
+						<span> Presença: </span>				
+					</label>
+						<label class="heart-switch">
+							<input type="checkbox" name="presença" onchange="changeValue(this)">
+							<svg viewBox="0 0 33 23" fill="white">
+							<path d="M23.5,0.5 C28.4705627,0.5 32.5,4.52943725 32.5,9.5 C32.5,16.9484448 21.46672,22.5 16.5,22.5 C11.53328,22.5 0.5,16.9484448 0.5,9.5 C0.5,4.52952206 4.52943725,0.5 9.5,0.5 C12.3277083,0.5 14.8508336,1.80407476 16.5007741,3.84362242 C18.1491664,1.80407476 20.6722917,0.5 23.5,0.5 Z"></path>
+							</svg>
+						</label>
+					<div class="wrapper1">
+							<button class="submit" type="submit"> ENVIAR
+								<!-- <span>ENVIAR</span> -->
+								<div class="success">
+								<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+							
+								<path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
+								</svg>
+								</div>
+							</button>
+						</div>
+				</form>
+			</div>
+		</div>		
+	
+				<script type="text/javascript">
+					window.onload = function() {
+					document.body.classList.add('fade-in');
+				}
+				</script>
+			<script src="https://kit.fontawesome.com/449218d336.js" crossorigin="anonymous"></script>
+	
+			<footer>
+				<div class="container-rodape">
+					<div class="rodape-text">
+						<div class="textrod1">
+							<p><b>© 2023-2024 Karleandson e Evelyn. Contribua com nossa lua de mel.</b></p>
+							<p><b>Site criado com amor para celebrar nossa união.</b></p>
+						</div>
+					</div>
+				</div>
+				<div class="container-textrod">
+						<p class="textrod"><b>Ler QR-Code <br> ou <br> Clique! </b></p>
+				</div>
+				<div class="qrcode">
+					<!-- <p class="pix1"><b>PIX<br>Contribua</b> </p> -->
+					<img class="qrcode1" id="myImage" src="fotos/QRCODE.png" alt="Imagem">
+				</div> 
+			</footer>
+	</div>
+	<script src="./confirmação.js"></script>
+	<script src="./pix.js"></script>
+	<script>
+		function changeValue(checkbox) {
+		  if (checkbox.checked) {
+			checkbox.value = "Sim";
+		  } else {
+			checkbox.value = "Não";
+		  }
+		}
+		// Definir o valor inicial ao carregar a página
+		var checkbox = document.querySelector('input[name="presença"]');
+		changeValue(checkbox);
+	</script>
+	<script  src="./menu.js"></script>
+</body>
+</html>
+<!--  -->
+<!--  -->
