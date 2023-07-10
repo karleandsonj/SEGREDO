@@ -26,13 +26,13 @@ footer {
   max-height: calc( 100vh - 80px); /* Altura máxima menos a altura do footer */
 }
   
-  .qrcode {
-    /* background-color: rgb(21, 255, 0); */
-    width: 12vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.qrcode {
+  /* background-color: rgb(21, 255, 0); */
+  width: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
   .qrcode1 {
     height: 12vh;
@@ -114,6 +114,13 @@ footer {
       top: -20px;
       left: 2px;
 
+    }
+
+    .content1{
+      overflow:auto;
+      padding-bottom: 20px;
+    /*   background-color: aqua; */
+      max-height: calc( 100vh - 67px); /* Altura máxima menos a altura do footer */
     }
 /*     .rodape-text {
       width: 80%;
