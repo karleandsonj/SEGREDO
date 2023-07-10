@@ -5,7 +5,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    z-index:0;
+    z-index:1;
     display: flex;
     flex: 0;
     /* border-top: 1px solid rgb(0, 0, 0); */
@@ -117,9 +117,6 @@ footer {
     }
 
     .content1{
-      overflow:auto;
-      padding-bottom: 20px;
-    /*   background-color: aqua; */
       max-height: calc( 100vh - 67px); /* Altura máxima menos a altura do footer */
     }
 /*     .rodape-text {
