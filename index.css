@@ -7,10 +7,16 @@
 /*CORPO*/
 body {
 	background-color: #FFF9F2(261, 100%, 61%, 0.514);
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+.containerft{
+  background-color: #7c000034;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
 }
 
 .flor{
@@ -19,7 +25,7 @@ body {
   position: absolute;
   right: 50vw;
   z-index: -1;
-  rotate: 20deg;
+  transform: rotate(20deg);
 }
 
 .borb{
@@ -28,16 +34,14 @@ body {
   position: absolute;
   left: 54vw;
   z-index: -1;
-  rotate: 40deg;
+  transform: rotate(40deg);
 }
 
 #borda {
-  display: flex;
   position: absolute;
   margin: 0;
   width: 65vh;
   height: 68vh;
-  object-fit: cover;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -45,16 +49,14 @@ body {
 }
 .imagem_karleeve {
     border-radius: 50%;
-    display: flex;
     position:absolute;
     margin: auto;
     width: 60vh;
     height:60vh;
-    object-fit: cover;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: -3;
+    z-index: -2;
   }
 
 
@@ -123,29 +125,31 @@ body.fade-in {
 
 @media screen and (max-width: 768px) {
   .imagem_karleeve{
-    margin-top: -40px;
-    width: 50vh;
-    height:50vh;
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vh;
+  height: 50vh;
   }
 
   .flor{
     height: 18vh;
-    top: 50vh;
+    top: 55vh;
     right: 50vw;
   }
 
   .borb{
     height: 15vh;
-    top:15vh;
-    left: 62vw;
+    top:16vh;
+    left: 55vw;
   }
 
   #borda {
     width: 53vh;
     height:  57vh;
     object-fit: cover;
-    margin-top: -40px;
+    margin: auto;
   }
 
   .E,
@@ -158,21 +162,33 @@ body.fade-in {
     .borb{
       height: 15vh;
       top:15vh;
-      left: 65vw;
+      margin: auto;
     }
   }
 
   @media screen and (max-width: 450px) {
+
     .imagem_karleeve{
       width: 50vh;
       height:50vh;
-      margin-top: -40px;
     }
 
     #borda {
       width: 53vh;
       height:  57vh;
-      margin-top: -40px;
+      margin: auto;
+    }
+
+    .flor{
+      height: 18vh;
+      top: 55vh;
+      right: 50vw;
+    }
+  
+    .borb{
+      height: 15vh;
+      top:16vh;
+      left: 55vw;  
     }
   } 
 

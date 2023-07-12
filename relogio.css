@@ -3,9 +3,14 @@
     -webkit-text-stroke: 2px rgb(0, 48, 4); /* Define a espessura e a cor da borda */
     z-index: 2;
     font-size: 8vh;
+    justify-content: center;
     text-align: center;
     margin-top: 75vh;
     margin-bottom: 15vh;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 @media screen and (max-width: 460px) {
@@ -17,13 +22,13 @@
 
 @media screen and (max-width: 390px) {
     #countdown{
-        margin-top: 70vh;
+        margin-top: 80vh;
         font-size: 6vh;
       }
 }
 
-@media screen and (max-width: 249px) {
+@media screen and (max-width: 294px) {
     #countdown{
-        margin-top: 65vh;
+        margin-top: 175vw;
       }
 }
