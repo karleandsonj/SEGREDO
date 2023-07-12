@@ -368,9 +368,9 @@ hr {
     cursor: pointer;
   }
 
-  nav.navicon:hover {
+  nav.navicon.active {
     -webkit-transition-timing-function: linear;
-    transition-timing-function:linear;
+    transition-timing-function: linear;
     -webkit-transition-duration: 0.75s;
     transition-duration: 0.75s;
     -webkit-clip-path: circle(390px at 225px 24px);
