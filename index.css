@@ -171,24 +171,27 @@ body.fade-in {
     .imagem_karleeve{
       width: 50vh;
       height:50vh;
+      margin-top: -40px;
     }
 
     #borda {
       width: 53vh;
       height:  57vh;
-      margin: auto;
+      margin-top: -38px;
     }
 
     .flor{
       height: 18vh;
       top: 55vh;
       right: 50vw;
+      margin-top: -40px;
     }
   
     .borb{
       height: 15vh;
       top:16vh;
       left: 55vw;  
+      margin-top: -40px;
     }
   } 
 
