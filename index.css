@@ -1,67 +1,97 @@
- * {
+* {
 	margin:  0;
 	padding: 0;
 	box-sizing: border-box;
+/*   overflow-x: hidden; */
     }
 /*CORPO*/
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: hsla(261, 100%, 61%, 0.514);
-/*   background-size: cover; */
+	background-color: #FFF9F2(261, 100%, 61%, 0.514);
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-  .imagem_karleeve {
-    z-index: -5;
-    border-radius: 5%;
-    border:solid 5px rgb(251, 144, 255);
-    display:flex;
-    top: 130px;
+.flor{
+  height: 20vh;
+  top: 60vh;
+  position: absolute;
+  right: 50vw;
+  z-index: -1;
+  rotate: 20deg;
+}
+
+.borb{
+  height: 20vh;
+  top:11vh;
+  position: absolute;
+  left: 54vw;
+  z-index: -1;
+  rotate: 40deg;
+}
+
+#borda {
+  display: flex;
+  position: absolute;
+  margin: 0;
+  width: 65vh;
+  height: 68vh;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+.imagem_karleeve {
+    border-radius: 50%;
+    display: flex;
+    position:absolute;
     margin: auto;
-    position:relative;
-/*     width: 50vw; */
-    height: 65vh;
-/*     justify-content: center;
-    text-align: center; */
-/*     justify-items: center; */
-  } 
+    width: 60vh;
+    height:60vh;
+    object-fit: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+  }
+
+
 
 /* TEXTO K & E */
 
-/* .titulo1{
-  background-color: aqua;
-  left: 0;
-  display: flex;
-} */
-
-.titulo2{
+/* .titulo2{
   position: fixed;
   top: 50px;
   right: 20px;
   height: 100vh;
   width: 50vw;
-/*   background-color: #f1f1f1; */
   padding: 10px;
   margin: 0;
-/*   z-index: 1; */
+} */
+
+@font-face {
+  font-family: 'ALTA';
+  src: url('caminho/para/o/arquivo-da-fonte.woff2') format('woff2'),
+       url('caminho/para/o/arquivo-da-fonte.woff') format('woff');
+  /* Outras propriedades opcionais, como font-weight e font-style, podem ser especificadas aqui */
 }
 
 h1.K {
-  left: 50%;
-  font-size: 90px;
-  font-family: 'Great Vibes', cursive;
-  transform: rotate(20deg);
+  top: 20vh;
+  position: absolute;
+  right: 500px;
+  font-size: 5rem;
+  font-family: 'ALTA', sans-serif;
 }
 
 h1.E {
-  right: 50%;
-  font-size: 90px;
-  top: 60px;
-  font-family: 'Great Vibes', cursive;
-  transform: rotate(-20deg);
+  top: 65vh;
   position: absolute;
+  left: 500px;
+  font-size: 5rem;
+  font-family: 'ALTA', sans-serif;
 }
 
 h1 {
@@ -73,11 +103,8 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  height: max-content;
   overflow: hidden;
 }
-
-  
 
 body {
   opacity: 0;
@@ -96,17 +123,30 @@ body.fade-in {
 
 @media screen and (max-width: 768px) {
   .imagem_karleeve{
-    top:110px;
-    width: 90vw;
-    height:55vw;
+    margin-top: -40px;
+    width: 50vh;
+    height:50vh;
+    object-fit: cover;
   }
 
-/*   #countdown{
-    display: grid;
-    justify-content: end;
-    justify-items: center;
-    align-items: end;
-  } */
+  .flor{
+    height: 18vh;
+    top: 50vh;
+    right: 50vw;
+  }
+
+  .borb{
+    height: 15vh;
+    top:15vh;
+    left: 62vw;
+  }
+
+  #borda {
+    width: 53vh;
+    height:  57vh;
+    object-fit: cover;
+    margin-top: -40px;
+  }
 
   .E,
   .K{
@@ -114,20 +154,25 @@ body.fade-in {
   }
   }
 
-  @media screen and (max-height: 450px) {
+  @media screen and (max-width: 460px) {
+    .borb{
+      height: 15vh;
+      top:15vh;
+      left: 65vw;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
     .imagem_karleeve{
-      height: 60vh;
-      width: 50vw;
-      top: 100px;
-      display: flex;
+      width: 50vh;
+      height:50vh;
+      margin-top: -40px;
     }
-/*     .E{
-      margin-right: 100px;
-      z-index: 2;
+
+    #borda {
+      width: 53vh;
+      height:  57vh;
+      margin-top: -40px;
     }
-    .K{
-      margin-left: 100px;
-      z-index: 2;
-    } */
   } 
 

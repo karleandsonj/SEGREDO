@@ -1,0 +1,29 @@
+#countdown {
+    color: rgb(87, 255, 82); /* Define a cor do texto */
+    -webkit-text-stroke: 2px rgb(0, 48, 4); /* Define a espessura e a cor da borda */
+    z-index: 2;
+    font-size: 8vh;
+    text-align: center;
+    margin-top: 75vh;
+    margin-bottom: 15vh;
+  }
+
+@media screen and (max-width: 460px) {
+  #countdown{
+    margin-top: 75vh;
+    font-size: 6vh;
+  }
+}
+
+@media screen and (max-width: 390px) {
+    #countdown{
+        margin-top: 70vh;
+        font-size: 6vh;
+      }
+}
+
+@media screen and (max-width: 249px) {
+    #countdown{
+        margin-top: 65vh;
+      }
+}

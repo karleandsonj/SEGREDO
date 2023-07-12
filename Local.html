@@ -7,54 +7,72 @@
     <link rel="stylesheet" type="text/css" href="local.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="rodape.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap" async defer></script>
-
 </head>
 <body>
-	<header>
-        <nav  id="menu"> 
-            <div class="ci"></div>               
-            <div class="logo"> 
-                <img class="logo1" src="fotos/logo.png" alt="" > 
-            </div>
-            <nav class="navicon">
-                <div class="navicon1">
-                  <div></div>
+    <div class="local">  
+        <header>
+            <nav  id="menu"> 
+                <div class="ci"></div>               
+                <div class="logo"> 
+                    <img class="logo1" src="fotos/logo.png" alt="" > 
                 </div>
-              
-                <a class="nava" href="index.html" > INICIO &#x1F3E0;</a>
-                <a class="nava" href="Local.html" >LOCAL &#x1F4CD;</a>
-                <a class="nava" href="confirmação.html"> CONFIRMAÇÃO &#x2705;</a>
-                <a class="nava" href="Lista.html" > PRESENTES &#x1F381;</a>
-              
-            </nav>     
-            <nav class="menu-horizontal">
-                <ul class="topnav" >
-                    <h2 class="menuE">Evelyn</h2>
-                    <h2 class="menuK">Karl</h2>
-                    <li class="l1"><a href="index.html" class="lineTop1"> <span> Inicio &#x1F3E0;</span> </a></li>
-                    <li class="l2"><a href="Local.html" class="lineTop1"> <span> Local &#x1F4CD;</span></a></li>
-                    <hr>
-                    <li class="l3"><a href="confirmação.html" class="lineTop2"> <span> Confirmação &#x2705; </span></a></li>
-                    <li class="l4"><a href="Lista.html" class="lineTop2"> <span> Presentes &#x1F381;</span></a></li>
-                    </li>
-                </ul>
+                <nav class="navicon">
+                    <div class="navicon1">
+                    <div></div>
+                    </div>
+                
+                    <a class="nava" href="index.html" > INICIO &#x1F3E0;</a>
+                    <a class="nava" href="Local.html" >LOCAL &#x1F4CD;</a>
+                    <a class="nava" href="confirmação.html"> CONFIRMAÇÃO &#x2705;</a>
+                    <a class="nava" href="Lista.html" > PRESENTES &#x1F381;</a>
+                
+                </nav>     
+                <nav class="menu-horizontal">
+                    <ul class="topnav" >
+                        <h2 class="menuE">Eve</h2>
+                        <h2 class="menuK">Karl</h2>
+                        <li class="l1"><a href="index.html" class="lineTop1"> <span> Inicio &#x1F3E0;</span> </a></li>
+                        <li class="l2"><a href="Local.html" class="lineTop1"> <span> Local &#x1F4CD;</span></a></li>
+                        <hr>
+                        <li class="l3"><a href="confirmação.html" class="lineTop2"> <span> Confirmação &#x2705; </span></a></li>
+                        <li class="l4"><a href="Lista.html" class="lineTop2"> <span> Presentes &#x1F381;</span></a></li>
+                        </li>
+                    </ul>
+                </nav>
             </nav>
-        </nav>
-    </header>
-    
-    <div class="mapdiv">
-        <h2 class="text">Localização</h2>
-        <a class="map" href="https://goo.gl/maps/tuoP4NXj5WT6yJ178" target="_blank" alt="LOCALIZAÇÃO" >
-            <img src="fotos/LOCAL.png" class="img" alt="">
-        </a>
+        </header>
+     
+        <div class="mapdiv">
+            <div class="text1">
+                <h2 class="text">Localização</h2>
+            </div>
+            <a class="map" href="https://goo.gl/maps/tuoP4NXj5WT6yJ178" target="_blank" alt="LOCALIZAÇÃO" >
+                <img src="fotos/LOCAL.png" class="img" alt="">
+            </a>
+        </div>
+        <script type="text/javascript">
+            window.onload = function() {
+            document.body.classList.add('fade-in');
+        }
+        </script>
+        <div class="fotofaixa"> <h2 class="namefoto"> FOTOS </h2></div>
+
+        <div class="slide">
+            <div class="container">
+            <button class="arrow-left control" aria-label="Previous image">◀</button>
+            <button class="arrow-right control" aria-label="Next Image">▶</button>
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img src="fotos/slider/1 (1).jpg" class="item current-item ft1">
+                    <img src="fotos/slider/1 (2).jpg" class="item current-item ft2">
+                    <img src="fotos/slider/1 (3).jpg" class="item current-item ft3">
+                </div>
+            </div>
+            </div>
+        </div>
+
     </div>
-    <script type="text/javascript">
-        window.onload = function() {
-        document.body.classList.add('fade-in');
-    }
-    </script>
-    <script src ="local.js" ></script>
+
     <footer>
         <div class="container-rodape">
             <div class="rodape-text">
@@ -69,11 +87,11 @@
         </div>
         <div class="qrcode">
             <!-- <p class="pix1"><b>PIX<br>Contribua</b> </p> -->
-            <img class="qrcode1" id="myImage" src="fotos/QRCODE.png" alt="Imagem">
+            <img class="qrcode1" id="myImage" src="fotos/QRCODE-removebg-preview.png" alt="Imagem">
         </div>
         <script  src="./pix.js"></script>
-        <script  src="./menu.js"></script>
     </footer>
-
+<script  src="./menu.js"></script>
+<script  src="local.js"></script>
 </body>
 </html>
