@@ -375,6 +375,7 @@ hr {
     transition-duration: 0.75s;
     -webkit-clip-path: circle(390px at 225px 24px);
     clip-path: circle(500px at 100px 80px);
+    z-index: 0;
   }
 
   a.nava {
@@ -415,12 +416,12 @@ hr {
   }
 
 
-  a.navicon1::selection { 
+/*   a.navicon1::selection { 
     background: #ff28ad; 
     border-radius: 10px;
     z-index: 20;
     cursor: pointer;
-  }
+  } */
 
   .navicon1{
     padding: 63px 55px;
