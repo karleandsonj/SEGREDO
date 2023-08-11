@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .containergeral{
+    background-color: aqua;
+    height: 100vh;
+} */
+
+/* .nome123{
+    background-color: aqua;
+    position: fixed;
+    display: grid;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    top: 216px;
+    right: 230px; 
+} */
+
+input{
+    padding: 6px;
+    width: 300px;
+}
+
+h1{
+    margin-top: 120px;
+    text-align: center;
+}
+
+.containerD1 {
+    /* background-color: rgb(0, 255, 55); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centralizar verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    border-radius: 0 0 20px 20px;
+    margin: 10px auto; /* Adicionando margem automática para centralizar horizontalmente */
+
+}
+
+
+.containerD {
+    overflow: auto; /* Oculta a barra de rolagem fora da borda */
+    border-radius:  0 0 20px 20px;
+    border: #333 solid;
+    width: 90%; /* Largura máxima de 90% */
+    max-width: 800px; /* Definindo um valor máximo para evitar que o container fique muito grande */
+    max-height: 55vh;
+    min-height: 7VH; 
+    margin-bottom: 80px;
+    
+}
+
+/* Estilo para a tabela de dados */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+/* Estilo para o cabeçalho da tabela */
+#data-table thead {
+    background-color: #5C6244;
+    color: #ffffff;
+    text-align: center; /* Centraliza o texto nas células */
+}
+
+/* Estilo para as células do cabeçalho */
+#data-table th {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    text-align: center; /* Centraliza o texto nas células */
+}
+
+/* Estilo para as células dos dados */
+#data-table td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center; /* Centraliza o texto nas células */
+}
+
+/* Estilo para as linhas alternadas */
+#data-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para o texto das células */
+#data-table td span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para a barra de rolagem interna */
+.containerD::-webkit-scrollbar {
+    width: 10px;
+}
+
+.containerD::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 0 0 30px ;
+}
+
+.saved {
+    background-color: #c1f0c1; /* Cor de fundo para linha salva */
+    border: 2px solid #3fbf3f; /* Borda para linha salva */
+  }
+  
+/* Estilos para tornar o formulário responsivo */
+.responsive-form {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Divide a linha em duas colunas, sendo a primeira com largura flexível e a segunda com largura automática */
+    gap: 10px;
+    align-items: center; /* Centraliza verticalmente os itens */
+  }
+  
+  /* Estilos para ajustar a largura do input e botão */
+  .name {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  #submit {
+    align-self: flex-end;
+    padding: 5px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .btn::after {
+    content: 'salvar';
+    font-weight: bold;
+    margin-top: -20px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: rgb(0, 189, 57);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    transition: .2s linear;
+  }
+  
+  .icon path {
+    fill: rgba(23, 182, 9, 0.664);
+    transition: .2s linear;
+  }
+  
+  .btn:hover > .icon {
+    transform: scale(1.2);
+  }
+  
+  .btn:hover > .icon path {
+    fill: rgb(177, 139, 189);
+  }
+  
+  .btn:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  
+  
+  
+  

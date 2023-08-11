@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------------ */
+
 const telefoneInput = document.getElementById('telefone');
 
 telefoneInput.addEventListener('input', formatarTelefone);
@@ -53,7 +55,7 @@ const handleSubmit = (event) => {
   addloading();
   
   const name = document.querySelector('input[name=name]').value;
-  const Presentes = document.querySelector('select[name=Presentes]').value;
+  /* const Presentes = document.querySelector('select[name=Presentes]').value; */
   const email = document.querySelector('input[name=email]').value;
   const telefone = document.querySelector('input[name=telefone]').value;
   const presença = document.querySelector('input[name=presença]').value;
@@ -64,7 +66,7 @@ const handleSubmit = (event) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ name, Presentes, email, telefone, presença }),
+    body: JSON.stringify({ name, email, telefone, presença }),
   }).then(() => {
     removeloading();
   });

@@ -1,25 +1,23 @@
 * {
-	margin:  0;
-	padding: 0;
-	box-sizing: border-box;
-/*   overflow-x: hidden; */
-    }
-/*CORPO*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-	background-color: #FFF9F2(261, 100%, 61%, 0.514);
+  background-color: #FFF9F2;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-.containerft{
-/*   background-color: #7c000034; */
+.containerft {
   height: 100vh;
   width: 100vw;
   position: fixed;
 }
 
-.flor{
+.flor {
   height: 20vh;
   top: 60vh;
   position: absolute;
@@ -28,9 +26,9 @@ body {
   transform: rotate(20deg);
 }
 
-.borb{
+.borb {
   height: 20vh;
-  top:11vh;
+  top: 11vh;
   position: absolute;
   left: 54vw;
   z-index: -1;
@@ -47,37 +45,17 @@ body {
   transform: translate(-50%, -50%);
   z-index: -2;
 }
+
 .imagem_karleeve {
-    border-radius: 50%;
-    position:absolute;
-    margin: auto;
-    width: 60vh;
-    height:60vh;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -2;
-  }
-
-
-
-/* TEXTO K & E */
-
-/* .titulo2{
-  position: fixed;
-  top: 50px;
-  right: 20px;
-  height: 100vh;
-  width: 50vw;
-  padding: 10px;
-  margin: 0;
-} */
-
-@font-face {
-  font-family: 'ALTA';
-  src: url('caminho/para/o/arquivo-da-fonte.woff2') format('woff2'),
-       url('caminho/para/o/arquivo-da-fonte.woff') format('woff');
-  /* Outras propriedades opcionais, como font-weight e font-style, podem ser especificadas aqui */
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  width: 60vh;
+  height: 60vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
 }
 
 h1.K {
@@ -114,84 +92,79 @@ body {
   font-size: 100%;
 }
 
-/* Configuração da transição */
 body.fade-in {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease-in-out;
 }
 
-
-
 @media screen and (max-width: 768px) {
-  .imagem_karleeve{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50vh;
-  height: 50vh;
+  .imagem_karleeve {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 50vh;
   }
 
-  .flor{
+  .flor {
     height: 18vh;
     top: 55vh;
     right: 50vw;
   }
 
-  .borb{
+  .borb {
     height: 15vh;
-    top:16vh;
+    top: 16vh;
     left: 55vw;
   }
 
   #borda {
     width: 53vh;
-    height:  57vh;
+    height: 57vh;
     object-fit: cover;
     margin: auto;
   }
 
   .E,
-  .K{
+  .K {
     display: none;
   }
+}
+
+@media screen and (max-width: 460px) {
+  .borb {
+    height: 15vh;
+    top: 15vh;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .imagem_karleeve {
+    width: 50vh;
+    height: 50vh;
+    margin-top: -40px;
   }
 
-  @media screen and (max-width: 460px) {
-    .borb{
-      height: 15vh;
-      top:15vh;
-      margin: auto;
-    }
+  #borda {
+    width: 53vh;
+    height: 57vh;
+    margin-top: -38px;
   }
 
-  @media screen and (max-width: 450px) {
+  .flor {
+    height: 18vh;
+    top: 55vh;
+    right: 50vw;
+    margin-top: -40px;
+  }
 
-    .imagem_karleeve{
-      width: 50vh;
-      height:50vh;
-      margin-top: -40px;
-    }
-
-    #borda {
-      width: 53vh;
-      height:  57vh;
-      margin-top: -38px;
-    }
-
-    .flor{
-      height: 18vh;
-      top: 55vh;
-      right: 50vw;
-      margin-top: -40px;
-    }
-  
-    .borb{
-      height: 15vh;
-      top:16vh;
-      left: 55vw;  
-      margin-top: -40px;
-    }
-  } 
-
+  .borb {
+    height: 15vh;
+    top: 16vh;
+    left: 55vw;
+    margin-top: -40px;
+  }
+}

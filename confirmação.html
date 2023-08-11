@@ -24,7 +24,7 @@
 						<a class="nava" href="index.html" > INICIO &#x1F3E0;</a>
 						<a class="nava" href="Local.html" >LOCAL &#x1F4CD;</a>
 						<a class="nava" href="confirmação.html"> CONFIRMAÇÃO &#x2705;</a>
-						<a class="nava" href="Lista.html" > PRESENTES &#x1F381;</a>
+						<a class="nava" href="presentes.html" > PRESENTES &#x1F381;</a>
 					
 					</nav>     
 					<nav class="menu-horizontal">
@@ -35,7 +35,7 @@
 							<li class="l2"><a href="Local.html" class="lineTop1"> <span> Local &#x1F4CD;</span></a></li>
 							<hr>
 							<li class="l3"><a href="confirmação.html" class="lineTop2"> <span> Confirmação &#x2705; </span></a></li>
-							<li class="l4"><a href="Lista.html" class="lineTop2"> <span> Presentes &#x1F381;</span></a></li>
+							<li class="l4"><a href="presentes.html" class="lineTop2"> <span> Presentes &#x1F381;</span></a></li>
 						</ul>
 					</nav>
 				</nav>
@@ -47,14 +47,17 @@
 				<div class="load" id="load">
 					<!-- <img src="fotos/load.gif" alt="GIF animado" id="">  -->
 				</div>
+			<div class="titulo">
+				<h2>Confirmação</h2>
+			</div>
 			<div class="container1">
-				<form>
+				<form autocomplete="off">
 					<label for="name">
 						<span>Nome:</span> 
-						<input type="text" id="name" class= "name" name="name" placeholder="Digite Seu Nome" required>
+						<input type="text" id="name" class= "name" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
 					</label>
 
-					<label for="Presentes" id="press" >
+					<!-- <label for="Presentes" id="press" >
 						<span class="pres1" >Presentes:</span>
 						<select name="Presentes" class="Presentes12" id="select">
 							<div class="presentes1">
@@ -67,16 +70,16 @@
 								<option>PRATOS</option>
 							</div>
 						</select>
-					</label>
+					</label> -->
 
 					<label for="email">
 						<span>E-mail:</span>
-						<input type="email" id="email" class= "email" name="email" placeholder="exemplo@email.com">
+						<input type="email" id="email" class= "email" name="email" autocomplete="off" placeholder="exemplo@email.com">
 					</label>
 
 					<label for="telefone">
 						<span>Telefone:</span>
-						<input type="tel" id="telefone" class="telefone" name="telefone" maxlength="15" placeholder="(99) 99999-9999" required>
+						<input type="tel" id="telefone" class="telefone" name="telefone" maxlength="15" autocomplete="off" placeholder="(99) 99999-9999" required>
 					</label>
 
 
@@ -91,7 +94,7 @@
 							</svg>
 						</label>
 					<div class="wrapper1">
-							<button class="submit" type="submit"> ENVIAR
+							<button class="submit" id="submit" type="submit"> ENVIAR
 								<!-- <span>ENVIAR</span> -->
 								<div class="success">
 								<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
@@ -100,7 +103,7 @@
 								</svg>
 								</div>
 							</button>
-						</div>
+					</div>
 				</form>
 			</div>
 		</main>			
@@ -109,7 +112,7 @@
 					document.body.classList.add('fade-in');
 				}
 				</script>
-			<script src="https://kit.fontawesome.com/449218d336.js" crossorigin="anonymous"></script>
+				<script src="https://kit.fontawesome.com/449218d336.js" crossorigin="anonymous"></script>
 	
 			<footer>
 				<div class="container-rodape">
@@ -125,7 +128,7 @@
 				</div>
 				<div class="qrcode">
 					<!-- <p class="pix1"><b>PIX<br>Contribua</b> </p> -->
-					<img class="qrcode1" id="myImage" src="fotos/QRCODE-removebg-preview.png" alt="Imagem">
+					<img class="qrcode1" id="myImage" src="fotos/QRNU.png" alt="Imagem">
 				</div> 
 			</footer>
 	<script src="./confirmação.js"></script>
