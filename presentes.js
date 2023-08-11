@@ -33,7 +33,7 @@ function loadGoogleSheetData(url) {
           nameCell.innerHTML = 
             `<form data-row="${i}" class="responsive-form"> <!-- Armazena o índice da linha no atributo data-row -->
               <label for="name">
-                <input type="text" id="name" class="name" name="name" autocomplete="off">
+                <input type="text" id="name" class="name" name="name" placeholder="Digite Seu Nome" autocomplete="off">
               </label>
               <button type="submit" id="submit" style="cursor: pointer;" class="btn">
                 <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -83,7 +83,7 @@ const handleSubmit = (event) => {
     body: JSON.stringify({ rowIndex, name }), // Envia o índice da linha e o valor do input para a API
   }).then(() => {
     removeloading();
-    alert('Dados Salvos');
+    alert('Dados Salvos, se caso foi inserido errado nos informe no zap 😋');
       // Esperar por 2 segundos (2000 milissegundos) antes de recarregar os dados da planilha
     setTimeout(function() {
     loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha

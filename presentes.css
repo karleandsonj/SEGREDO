@@ -41,6 +41,9 @@ h1{
 
 }
 
+/* td{
+  width: -50%;
+} */
 
 .containerD {
     overflow: auto; /* Oculta a barra de rolagem fora da borda */
@@ -122,6 +125,8 @@ h1{
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
+    text-align: center;
+    margin-left: 10px;
   }
   
   #submit {
