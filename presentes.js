@@ -33,9 +33,9 @@ function loadGoogleSheetData(url) {
           nameCell.innerHTML = 
             `<form data-row="${i}" class="responsive-form"> <!-- Armazena o índice da linha no atributo data-row -->
               <label for="name">
-                <input type="text" id="name" class="name" name="name" placeholder="Digite Seu Nome" autocomplete="off">
+                <input type="text" id="name" class="name" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
               </label>
-              <button type="submit" id="submit" style="cursor: pointer;" class="btn">
+              <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
                 <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
                 </svg>
@@ -59,10 +59,13 @@ function loadGoogleSheetData(url) {
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
 }
 
+
 // Chamar a função para carregar os dados da planilha
 loadGoogleSheetData(sheetURL);
 
 /* ------------------------------------------------------------------------------------------- */
+
+
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -83,24 +86,72 @@ const handleSubmit = (event) => {
     body: JSON.stringify({ rowIndex, name }), // Envia o índice da linha e o valor do input para a API
   }).then(() => {
     removeloading();
-    alert('Dados Salvos, se caso foi inserido errado nos informe no zap 😋');
+    /* alert('Dados Salvos, se caso foi inserido errado nos informe no zap 😋'); */
       // Esperar por 2 segundos (2000 milissegundos) antes de recarregar os dados da planilha
-    setTimeout(function() {
+/*     setTimeout(function() {
     loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha
-    }, 1000);
+    }, 500) */;
   });
 }
 
 // Função para adicionar o estado de carregamento
+const addloading = () => {
+  const load = document.querySelector('#load');
+  load.innerHTML = `
+    <div class="container">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  `;
+};
+
+// Função para remover o estado de carregamento
+const removeloading = () => {
+  const alerta = document.querySelector('#alerta');
+  alerta.innerHTML = `
+    <div class="d-flex justify-content-center mt-5 h-100">
+      <div class="d-flex align-items-center align-self-center card p-3 text-center cookies">
+        <img src="https://i.pinimg.com/originals/a1/cd/2e/a1cd2e4a82bf9407d751f02f81baf257.png" width="50" class="core">
+        <span class="mt-2"><b>Obrigado pela contribuição 😊</b></span>
+        <span class="justify">
+          <b>Se caso colocou seu nome no presente errado <br> nos chame no WhatsApp.</br>
+        </span>
+        <button class="btn btn-dark mt-3 px-4" type="button" id="reloadButton">✔️</button>
+      </div>
+    </div>
+  `;
+
+  const reloadButton = document.querySelector('#reloadButton');
+  reloadButton.addEventListener('click', function() {
+    location.reload();
+    loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha
+  }, 500);
+};
+
+
+/* // Função para adicionar o estado de carregamento
 function addloading() {
-  // Aqui você pode adicionar alguma indicação visual de que o envio está em andamento (por exemplo, um spinner ou mensagem de carregamento).
-  // Por exemplo:
-  // document.querySelector('.loading').style.display = 'block';
+  // Criar um elemento para o spinner (carregamento)
+  //const loader = document.createElement('div');
+  //loader.className = 'loader'; // Adicione a classe para estilizar o spinner, se necessário
+  // Você também pode adicionar o HTML necessário para um spinner, por exemplo:
+  //loader.innerHTML = '<div class="loader"></div>';
+
+  // Adicionar o spinner ao elemento com o ID "load"
+  //const loadElement = document.querySelector('#load');
+  //loadElement.innerHTML = ''; // Limpar o conteúdo anterior
+  //loadElement.appendChild(spinner);
 }
 
 // Função para remover o estado de carregamento
 function removeloading() {
-  // Aqui você pode remover a indicação visual de carregamento.
-  // Por exemplo:
-  // document.querySelector('.loading').style.display = 'none';
-}
+  // Remover o spinner (carregamento)
+  //const loadElement = document.querySelector('#load');
+  //loadElement.innerHTML = ''; // Remover o conteúdo do spinner
+} */
+
+
