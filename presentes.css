@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #FFF9F2;
+}
+
 /* .containergeral{
     background-color: aqua;
     height: 100vh;
@@ -28,6 +32,7 @@ input{
 h1{
     margin-top: 120px;
     text-align: center;
+    font-family: 'Tan Twinkle', sans-serif;
 }
 
 .containerD1 {
@@ -54,6 +59,7 @@ h1{
     max-height: 55vh;
     min-height: 7VH; 
     margin-bottom: 80px;
+    font-family: 'Tan Twinkle', sans-serif;
     
 }
 
@@ -74,20 +80,29 @@ h1{
 /* Estilo para as células do cabeçalho */
 #data-table th {
     padding: 8px;
-    border: 1px solid #cccccc;
+    border: 1px solid #000000;
     text-align: center; /* Centraliza o texto nas células */
+    background-color: #5C6244;
+    color: #ffffff;
 }
 
 /* Estilo para as células dos dados */
 #data-table td {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
+    border-bottom: 0px solid #000000;
     text-align: center; /* Centraliza o texto nas células */
 }
 
 /* Estilo para as linhas alternadas */
 #data-table tr:nth-child(even) {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+#data-table tr:nth-child(odd) {
+  background-color:#ccc;
+  color: #000000;
 }
 
 /* Estilo para o texto das células */
@@ -95,6 +110,7 @@ h1{
     font-size: 16px;
     font-weight: bold;
     color: #333;
+    left: 1px;
 }
 
 /* Estilo para a barra de rolagem interna */
@@ -103,7 +119,7 @@ h1{
 }
 
 .containerD::-webkit-scrollbar-thumb {
-    background-color: #333;
+    background-color: #333333b4;
     border-radius: 0 0 30px ;
 }
 
@@ -147,13 +163,13 @@ h1{
   }
   
   .btn1::after {
-    content: 'salvar';
+    content: 'Confirmar';
     font-weight: bold;
-    margin-top: -20px;
+    margin-top: -15px;
     width: fit-content;
     height: fit-content;
     position: absolute;
-    font-size: 15px;
+    font-size: 10px;
     color: rgb(0, 189, 57);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     opacity: 0;
@@ -169,7 +185,7 @@ h1{
   }
   
   .icon path {
-    fill: rgba(23, 182, 9, 0.664);
+    fill: rgb(147, 45, 179);
     transition: .2s linear;
   }
   
@@ -178,7 +194,7 @@ h1{
   }
   
   .btn1:hover > .icon path {
-    fill: rgb(177, 139, 189);
+    fill: rgba(56, 182, 45, 0.849);
   }
   
   .btn1:hover::after {

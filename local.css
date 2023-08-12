@@ -9,8 +9,17 @@
 } */
 
 body {
-    background-color: #FFF9F2(261, 100%, 61%, 0.514);
+  background-color: #FFF9F2;
     }
+
+h4{
+  margin-top: 50px;
+  font-family: 'Tan Twinkle', sans-serif;
+}
+
+.mapdiv{
+  text-align: center;
+}
 
 /* html body .local{
   max-height: calc( 100vh - 14vh);
@@ -40,11 +49,11 @@ body.fade-in {
 
 .map {
   display:flex;
-  top: 10px;
+  top: 30px;
   margin: auto;
   position:relative;
   width: 18%;
-/*   height: 50%; */
+/*   height: 100px; */
   justify-content: center;
   text-align: center;
   justify-items: center;
@@ -56,7 +65,7 @@ body.fade-in {
   top: -5px;
   margin: auto;
   position:relative;
-  width: 200%;
+  width: 230%;
   height: 100%;
   justify-content: center;
   text-align: center;
@@ -90,7 +99,7 @@ body.fade-in {
 } */
 
 .text {
-  margin-top: 110px;
+  margin-top: 120px;
   text-align: center ;
   font-size: 20px;
   font-family: 'Tan Twinkle', sans-serif;
@@ -103,12 +112,13 @@ body.fade-in {
   background-color: #BED1B5;
   width: 100vw;
   padding: 5px;
-  margin-top: 60px;
+  margin-top: 80px;
 /*   display:; */
 }
 
 .namefoto{
     text-align: center;
+    font-family: 'Tan Twinkle', sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -124,6 +134,21 @@ body.fade-in {
     display: flex;
     top: 10px;
   }
+
+/*   .item {
+    width: 50px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
+  } */
+
+/*   .container {
+    position: relative;
+    padding: 50px;
+    max-width: 100%;
+    margin: 0px  auto 10vh auto  ;
+  } */
 }
 
 /* slide */
@@ -131,7 +156,7 @@ body.fade-in {
 h1 {
   text-align: center;
   margin: 1em 0;
-  font-family: sans-serif;
+  font-family: 'Tan Twinkle', sans-serif;
 }
 
 .container {

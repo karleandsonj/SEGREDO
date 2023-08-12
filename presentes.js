@@ -129,7 +129,7 @@ const removeloading = () => {
   reloadButton.addEventListener('click', function() {
     location.reload();
     loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha
-  }, 500);
+  }, 1000);
 };
 
 
