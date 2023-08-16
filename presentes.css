@@ -170,7 +170,7 @@ h1{
     height: fit-content;
     position: absolute;
     font-size: 10px;
-    color: rgb(0, 189, 57);
+    color: rgb(0, 102, 14);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     opacity: 0;
     visibility: hidden;
@@ -185,7 +185,7 @@ h1{
   }
   
   .icon path {
-    fill: rgb(147, 45, 179);
+    fill: rgb(0, 102, 14);
     transition: .2s linear;
   }
   
@@ -194,7 +194,7 @@ h1{
   }
   
   .btn1:hover > .icon path {
-    fill: rgba(56, 182, 45, 0.849);
+    fill: rgba(49, 235, 32, 0.849);
   }
   
   .btn1:hover::after {
@@ -286,18 +286,16 @@ h1{
 span{
   position: relative;
   left: 20px;
+  color: #E6E7E2;
+  display: inline-block;
 }
 
 .justify{
+  position:relative;
   text-align: center;
   display: inline-block;
   color: #E6E7E2;
-}
-
-.mt-2{
-  display: inline-block;
-  text-align: center;
-  color: #E6E7E2;
+  left: 20px;
 }
 
 

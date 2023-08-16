@@ -268,7 +268,7 @@ li:hover .lineTop2:after {
  /* LOGO */
 .ci {
   border-top: 20px #A4B792 solid;
-  z-index: 8;
+  z-index: 7;
   border-radius: 50%;
   background-color: #E6E7E2;
   box-shadow: -1px 11px 6px -10px rgba(0,0,0,0.42);
@@ -295,11 +295,11 @@ li:hover .lineTop2:after {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+                     
 
 hr {
   border-top: 2px solid #ffffff00;

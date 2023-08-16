@@ -14,7 +14,7 @@ function loadGoogleSheetData(url) {
       dataTableBody.innerHTML = '';
 
       // Definir o limite máximo de linhas a serem carregadas (até a linha 10)
-      const maxRows = Math.min(tableRows.length, 10);
+      const maxRows = Math.min(tableRows.length, 61);
 
       // Percorrer as linhas da planilha a partir da linha 3 até o limite máximo (linha 10)
       for (let i = 3; i < maxRows; i++) {
