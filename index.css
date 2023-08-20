@@ -47,11 +47,10 @@ body {
 }
 
 .imagem_karleeve {
-  border-radius: 50%;
   position: absolute;
   margin: auto;
-  width: 60vh;
-  height: 60vh;
+  width: 80vh;
+  height: 80vh;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -100,7 +99,9 @@ body.fade-in {
 
 @media screen and (max-width: 768px) {
 
-  .imagem_karleeve {
+
+
+/*   .imagem_karleeve {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -126,7 +127,7 @@ body.fade-in {
     height: 57vh;
     object-fit: cover;
     margin: auto;
-  }
+  } */
 
   .E,
   .K {
@@ -134,38 +135,18 @@ body.fade-in {
   }
 }
 
-@media screen and (max-width: 460px) {
+/* @media screen and (max-width: 460px) {
   .borb {
     height: 15vh;
     top: 15vh;
     margin: auto;
   }
-}
+} */
 
 @media screen and (max-width: 450px) {
-  .imagem_karleeve {
-    width: 50vh;
-    height: 50vh;
-    margin-top: -10px;
+  .imagem_karleeve{
+    width: 100vw;
+    height: 75vh;
+    
   }
-
-  #borda {
-    width: 53vh;
-    height: 57vh;
-    margin-top: -10px;
-  }
-
-  .flor {
-    height: 18vh;
-    top: 55vh;
-    right: 50vw;
-    margin-top: -10px;
-  }
-
-  .borb {
-    height: 15vh;
-    top: 16vh;
-    left: 55vw;
-    margin-top: -10px;
-  }
-}
+} 
