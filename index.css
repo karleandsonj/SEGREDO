@@ -99,6 +99,7 @@ body.fade-in {
 }
 
 @media screen and (max-width: 768px) {
+
   .imagem_karleeve {
     position: absolute;
     top: 50%;
@@ -145,26 +146,26 @@ body.fade-in {
   .imagem_karleeve {
     width: 50vh;
     height: 50vh;
-    margin-top: -40px;
+    margin-top: -10px;
   }
 
   #borda {
     width: 53vh;
     height: 57vh;
-    margin-top: -38px;
+    margin-top: -10px;
   }
 
   .flor {
     height: 18vh;
     top: 55vh;
     right: 50vw;
-    margin-top: -40px;
+    margin-top: -10px;
   }
 
   .borb {
     height: 15vh;
     top: 16vh;
     left: 55vw;
-    margin-top: -40px;
+    margin-top: -10px;
   }
 }
