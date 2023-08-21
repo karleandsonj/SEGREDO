@@ -13,22 +13,15 @@
     transform: translate(-50%, -50%);
   }
 
-@media screen and (max-width: 460px) {
-  #countdown{
-    margin-top: 75vh;
-    font-size: 6vh;
-  }
-}
-
 @media screen and (max-width: 390px) {
     #countdown{
-        margin-top: 70vh;
-        font-size: 6vh;
+        margin-top: 75vh;
+        font-size: 7vh;
       }
 }
 
 @media screen and (max-width: 294px) {
     #countdown{
-        margin-top: 160vw;
+        margin-top: 165%;
       }
 }

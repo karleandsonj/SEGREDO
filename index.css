@@ -144,9 +144,10 @@ body.fade-in {
 } */
 
 @media screen and (max-width: 450px) {
+
   .imagem_karleeve{
     width: 100vw;
-    height: 60vh;
-
+    height: 100vw;
+    top: 45%;
   }
 } 

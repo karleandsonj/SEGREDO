@@ -18,3 +18,14 @@ document.addEventListener('click', function(event) {
     navicon.classList.remove('active');
   }
 });
+
+/* LOGO MOV */
+
+/* const logo = document.querySelector('.logo');
+
+logo.addEventListener('animationiteration', () => {
+  setTimeout(() => {
+    logo.classList.toggle('change');
+  }, 2000); // 2000 ms = 2 seconds
+}); */
+
