@@ -14,7 +14,7 @@ body {
 .containerft {
   height: 100vh;
   width: 100vw;
-  position: fixed;
+/*   position: fixed; */
 }
 
 .flor {
@@ -148,6 +148,6 @@ body.fade-in {
   .imagem_karleeve{
     width: 100vw;
     height: 100vw;
-    top: 45%;
+    margin-top: -50px;
   }
 } 
