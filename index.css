@@ -14,37 +14,8 @@ body {
 .containerft {
   height: 100vh;
   width: 100vw;
-/*   position: fixed; */
 }
 
-.flor {
-  height: 20vh;
-  top: 60vh;
-  position: absolute;
-  right: 50vw;
-  z-index: -1;
-  transform: rotate(20deg);
-}
-
-.borb {
-  height: 20vh;
-  top: 11vh;
-  position: absolute;
-  left: 54vw;
-  z-index: -1;
-  transform: rotate(40deg);
-}
-
-#borda {
-  position: absolute;
-  margin: 0;
-  width: 65vh;
-  height: 68vh;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -2;
-}
 
 .imagem_karleeve {
   position: absolute;
@@ -98,50 +69,12 @@ body.fade-in {
 }
 
 @media screen and (max-width: 768px) {
-
-
-
-/*   .imagem_karleeve {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vh;
-    height: 50vh;
-  }
-
-  .flor {
-    height: 18vh;
-    top: 55vh;
-    right: 50vw;
-  }
-
-  .borb {
-    height: 15vh;
-    top: 16vh;
-    left: 55vw;
-  }
-
-  #borda {
-    width: 53vh;
-    height: 57vh;
-    object-fit: cover;
-    margin: auto;
-  } */
-
   .E,
   .K {
     display: none;
   }
 }
 
-/* @media screen and (max-width: 460px) {
-  .borb {
-    height: 15vh;
-    top: 15vh;
-    margin: auto;
-  }
-} */
 
 @media screen and (max-width: 450px) {
 
