@@ -6,7 +6,20 @@
 
 body{
   background-color: #FFF9F2;
+} 
+
+body {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 100%;
 }
+
+body.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 /* .containergeral{
     background-color: aqua;
