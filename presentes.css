@@ -85,10 +85,14 @@ h1{
     background-color: #5C6244;
     color: #ffffff;
 }
+/* 
+span td {
+  padding: 20px;
+} */
 
 /* Estilo para as células dos dados */
 #data-table td {
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #000000;
     border-bottom: 0px solid #000000;
     text-align: center; /* Centraliza o texto nas células */

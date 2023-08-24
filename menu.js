@@ -19,6 +19,7 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
 /* LOGO MOV */
 
 /* const logo = document.querySelector('.logo');
