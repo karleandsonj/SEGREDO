@@ -24,9 +24,8 @@ body {
 .imagem_karleeve {
   position: absolute;
   margin: auto;
-  width: 80%;
-  max-width: 80vh;
-  height: auto;
+/*   width: 80%; */
+  width: 70vh;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -238,19 +237,6 @@ h4{
   /*   display:; */
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    margin-top: -50px;
-    max-width: 700px; /* Defina um valor máximo para a largura */
-    max-height: 600px; /* Defina um valor máximo para a largura */
-  /*   background-color: #7c0000; */
-    padding: 20px; /* Adicione um espaçamento interno */
-    box-sizing: border-box; /* Inclui padding no cálculo da largura */
-  }
 }
 
 @media screen and (max-width: 768px) {
