@@ -80,29 +80,11 @@ body.fade-in {
   transition: opacity 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
-
-  .E,
-  .K {
-    display: none;
-  }
-}
-
-
-@media screen and (max-width: 450px) {
-
-  .imagem_karleeve {
-    width: 100vw;
-    height: 100vw;
-    margin-top: -50px;
-  }
-}
-
 .fotofaixa {
   background: linear-gradient(to top, transparent 0%, rgba(0, 112, 34, 0.644) 100%);
   width: 100vw;
   padding: 5px;
-  margin-top: -30px;
+  margin-top: 50px;
 /*   display:; */
 }
 
@@ -110,6 +92,20 @@ body.fade-in {
     text-align: center;
     font-family: 'Tan Twinkle', sans-serif;
 }
+
+#fotofaixa1{
+  margin-top: 10px;
+}
+
+h4{
+  text-align: center;
+  font-family: 'Tan Twinkle', sans-serif;
+  font-size: 20px;
+}
+/* 
+.sobre{
+  margin-bottom: 20vh;
+} */
 
 /* GALERIA FOTOS */
 
@@ -119,12 +115,13 @@ body.fade-in {
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  margin-top: -45px;
+  margin-top: 50px;
   max-width: 700px; /* Defina um valor máximo para a largura */
   max-height: 600px; /* Defina um valor máximo para a largura */
 /*   background-color: #7c0000; */
   padding: 20px; /* Adicione um espaçamento interno */
   box-sizing: border-box; /* Inclui padding no cálculo da largura */
+  margin-bottom: 40vh;
 }
 
 .thumbnails {
@@ -135,7 +132,6 @@ body.fade-in {
   margin-top: -20px;
   padding: 10px 0;
   flex-wrap: nowrap;
-  margin-bottom: 5vh;
 }
 
 .thumbnails img {
@@ -181,7 +177,7 @@ body.fade-in {
   right: auto;
   bottom: 0;
   font-size: 20px;
-  line-height: 50vh;
+  line-height: 350px;
   width: 50px;
   color: #00ff2a;
   transition: all 600ms ease-in-out;
@@ -237,5 +233,48 @@ body.fade-in {
   /*   background-color: #7c0000; */
     padding: 20px; /* Adicione um espaçamento interno */
     box-sizing: border-box; /* Inclui padding no cálculo da largura */
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .E,
+  .K {
+    display: none;
+  }
+  .master .fa-chevron-left,
+  .master .fa-chevron-right {
+    line-height: 150px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .imagem_karleeve {
+    width: 100vw;
+    height: 100vw;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fotofaixa {
+    background: linear-gradient(to top, transparent 0%, rgba(0, 112, 34, 0.644) 100%);
+    width: 100vw;
+    padding: 5px;
+    margin-top: -90px;
+  /*   display:; */
+  }
+
+  .container {
+    margin-top: 110px;
+    max-width: 700px; /* Defina um valor máximo para a largura */
+    max-height: 600px; /* Defina um valor máximo para a largura */
+    margin-bottom: 40vh;
+  }
+
+  .master{
+    background-image: opacity(to top);
   }
 }

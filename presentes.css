@@ -69,7 +69,7 @@ h3{
     border: #333 solid;
     width: 90%; /* Largura máxima de 90% */
     max-width: 90%; /* Definindo um valor máximo para evitar que o container fique muito grande */
-    max-height: 50vh;
+    max-height: 58vh;
     min-height: 7VH; 
     margin-bottom: 80px;
     font-family: 'Tan Twinkle', sans-serif;
