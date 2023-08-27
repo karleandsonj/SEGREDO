@@ -42,8 +42,8 @@ input{
     width: 300px;
 }
 
-h1{
-    margin-top: 120px;
+h3{
+    margin-top: 105px;
     text-align: center;
     font-family: 'Tan Twinkle', sans-serif;
 }
@@ -68,8 +68,8 @@ h1{
     border-radius:  0 0 20px 20px;
     border: #333 solid;
     width: 90%; /* Largura máxima de 90% */
-    max-width: 800px; /* Definindo um valor máximo para evitar que o container fique muito grande */
-    max-height: 55vh;
+    max-width: 90%; /* Definindo um valor máximo para evitar que o container fique muito grande */
+    max-height: 50vh;
     min-height: 7VH; 
     margin-bottom: 80px;
     font-family: 'Tan Twinkle', sans-serif;

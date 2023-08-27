@@ -86,11 +86,6 @@ const handleSubmit = (event) => {
     body: JSON.stringify({ rowIndex, name }), // Envia o índice da linha e o valor do input para a API
   }).then(() => {
     removeloading();
-    /* alert('Dados Salvos, se caso foi inserido errado nos informe no zap 😋'); */
-      // Esperar por 2 segundos (2000 milissegundos) antes de recarregar os dados da planilha
-/*     setTimeout(function() {
-    loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha
-    }, 500) */;
   });
 }
 
@@ -131,27 +126,3 @@ const removeloading = () => {
     loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha
   }, 1000);
 };
-
-
-/* // Função para adicionar o estado de carregamento
-function addloading() {
-  // Criar um elemento para o spinner (carregamento)
-  //const loader = document.createElement('div');
-  //loader.className = 'loader'; // Adicione a classe para estilizar o spinner, se necessário
-  // Você também pode adicionar o HTML necessário para um spinner, por exemplo:
-  //loader.innerHTML = '<div class="loader"></div>';
-
-  // Adicionar o spinner ao elemento com o ID "load"
-  //const loadElement = document.querySelector('#load');
-  //loadElement.innerHTML = ''; // Limpar o conteúdo anterior
-  //loadElement.appendChild(spinner);
-}
-
-// Função para remover o estado de carregamento
-function removeloading() {
-  // Remover o spinner (carregamento)
-  //const loadElement = document.querySelector('#load');
-  //loadElement.innerHTML = ''; // Remover o conteúdo do spinner
-} */
-
-
