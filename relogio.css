@@ -5,27 +5,16 @@
     font-size: 8vh;
     justify-content: center;
     text-align: center;
-    margin-top: 550px;
-    display: flex;
-    position: relative;
+    margin-top: 75vh;
+    display: grid;
+    position: absolute;
     left: 50%;
     transform: translate(-50%);
   }
 
-@media screen and (max-width: 390px) {
-    #countdown{
-        font-size: 5vh;
-      }
-}
-
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 480px){
   #countdown{
-    margin-top: 500px;
+    top: -5vh;
+    font-size: 10vw;
   }
 }
-
-/* @media screen and (max-width: 294px) {
-    #countdown{
-        margin-top: 165%;
-      }
-} */
