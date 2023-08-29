@@ -61,7 +61,7 @@ h1.E {
 
 
 h1 {
-    color: #7c0000;
+    color: #5C6244;
     text-align: center;
     left: 0;
     right: 0;
@@ -70,7 +70,7 @@ h1 {
 /* GALERY INICIO*/
 .fotofaixa {
   display: block;
-  background: linear-gradient(to top, transparent 0%, rgba(0, 112, 34, 0.644) 100%);
+  background: linear-gradient(to top, transparent 0%, #5C6244 100%);
   width: 100vw;
   padding: 5px;
   text-align: center;
@@ -115,7 +115,7 @@ h1 {
   opacity: 2;
   transition: all .6s ease-in-out;
   transform: scale(1) translatey(-8%); /* Efeito de flutuação para a esquerda */
-  outline: 2px solid #00490a;
+  outline: 2px solid #A4B792;
 }
 
 .master {
@@ -147,9 +147,9 @@ h1 {
   font-size: 20px;
   line-height: 250px;
   width: 50px;
-  color: #00ff2a;
+  color: #b4ff6e;
   transition: all 600ms ease-in-out;
-  background: linear-gradient(to left, transparent 0%, rgb(0, 53, 16) 100%);
+  background: linear-gradient(to left, transparent 0%, #5C6244 100%);
   opacity: 0.8;
   cursor: pointer;
   border: none;
@@ -159,23 +159,23 @@ h1 {
   right: 0;
   left: auto;
   text-align: right;
-  background: linear-gradient(to right, transparent 0%, rgb(0, 53, 16) 100%);
+  background: linear-gradient(to right, transparent 0%, #5C6244 100%);
 }
 
 .master .fa-chevron-left:hover{
   opacity: 1;
-  background: linear-gradient(to left, transparent 0%, rgb(0, 153, 46) 100%);
+  background: linear-gradient(to left, transparent 0%, #A4B792 100%);
 }
 .master .fa-chevron-right:hover {
   opacity: 1;
-  background: linear-gradient(to right, transparent 0%, rgb(0, 153, 46) 100%);
+  background: linear-gradient(to right, transparent 0%, #A4B792 100%);
 }
 
 /* GALERY FIM */
 
 .fotofaixa1 {
   display: block;
-  background: linear-gradient(to top, transparent 0%, rgba(0, 112, 34, 0.644) 100%);
+  background: linear-gradient(to top, transparent 0%, #5C6244 100%);
   width: 100vw;
   padding: 5px;
   text-align: center;

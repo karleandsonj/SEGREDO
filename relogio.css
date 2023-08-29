@@ -1,6 +1,6 @@
 #countdown {
-    color: rgb(87, 255, 82); /* Define a cor do texto */
-    -webkit-text-stroke: 1.7px rgb(0, 0, 0); /* Define a espessura e a cor da borda */
+    color: #A4B792; /* Define a cor do texto */
+    -webkit-text-stroke: 1.7px #252921; /* Define a espessura e a cor da borda */
     z-index: 1;
     font-size: 8vh;
     justify-content: center;
