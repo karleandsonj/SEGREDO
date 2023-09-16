@@ -82,13 +82,12 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -20px auto;
-/*   background-color: #00490a36; */
+  margin: 20px auto;
   max-width: 700px; /* Defina um valor máximo para a largura */
-  max-height: 400px; /* Defina um valor máximo para a largura */
-  padding: 40px; /* Adicione um espaçamento interno */
+  max-height: 600px; /* Defina um valor máximo para a largura */
+/*   background-color: #7c0000; */
+  padding: 5px; /* Adicione um espaçamento interno */
   box-sizing: border-box; /* Inclui padding no cálculo da largura */
-/*   margin-top: -20px; */
 }
 
 .thumbnails {
@@ -96,10 +95,9 @@ h1 {
   justify-content: center;
   align-items: center;
 /*   background-color: #e63946; */
-  margin-top: -20px;
   padding: 10px 0;
   flex-wrap: nowrap;
-  margin-bottom: 3vh;
+/*   margin-bottom: 3vh; */
 }
 
 .thumbnails img {
@@ -115,11 +113,11 @@ h1 {
   opacity: 2;
   transition: all .6s ease-in-out;
   transform: scale(1) translatey(-8%); /* Efeito de flutuação para a esquerda */
-  outline: 2px solid #A4B792;
+  outline: 2px solid #00490a;
 }
 
 .master {
-  top: 30px;
+/*   top: 20px; */
   position: relative;
 /*   background-color: aqua; */
   width: 100%;
@@ -188,9 +186,9 @@ h1 {
 }
 
 main{
-  display: grid;
-  height: 100%;
-  width: 100vw;
+   display:flow-root;
+/*   height: 100%;
+  width: 100vw; */ 
   margin-bottom: 15vh;
 }
 
@@ -213,19 +211,4 @@ main{
     display: none;
   }
 
-  .master {
-    width: 110%;
-    padding-bottom: 70%; /* Proporção para manter a altura */
-  }
-
-  .thumbnails {
-    display: flex; /* Use flexbox para alinhar as miniaturas */
-    justify-content: center;
-    align-items: center;
-  /*   background-color: #e63946; */
-    margin-top: 5px;
-    padding: 10px 0;
-    flex-wrap: nowrap;
-    margin-bottom: 3vh;
-  }
 }

@@ -4,19 +4,12 @@
   box-sizing: border-box;
 }
 
-/* main{
-    background-color: #0069d9;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-} */
-
 body {
   height: 100%;
   margin: 0;
   opacity: 0;
   visibility: hidden;
   background-color: #FFF9F2;
-  /*   overflow:auto;  */
 }
 
 .titulo {
@@ -51,11 +44,6 @@ h2 {
   padding-right: 20px;
 }
 
-/*     .scroll{
-      background-color: #0069d9;
-      min-height: 100vh;
-    } */
-
 body {
   background-color: #FFF9F2(261, 100%, 61%, 0.514);
 }
@@ -70,7 +58,6 @@ form {
   z-index: 2;
   text-align: center;
   min-height: 70vh;
-  /*         overflow-y: auto; */
 }
 
 header {
@@ -129,8 +116,6 @@ button.submit {
   cursor: pointer;
   transition: all .35s;
   text-decoration: none;
-  /* Remover sublinhado */
-
 }
 
 button:hover {
@@ -214,10 +199,6 @@ button.is_active span {
   border-radius: 5px;
 }
 
-/* option{
-  overflow-y: auto;
-} */
-
 .Presentes12 {
   align-items: center;
   text-align: center;
@@ -227,10 +208,6 @@ button.is_active span {
   width: 100%;
   box-shadow: 0 0 0.25rem #5C6244;
 }
-
-/*.pres1 {
-        display: none;
-      }*/
 
 body {
   opacity: 0;
@@ -252,68 +229,6 @@ body.fade-in {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
-
-
-/* CHECKBOX */
-/* .wrapper{
-  display: inline-flex;
-  height: 80px;
-  width: 80px;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 5px;
-  padding: 20px 10px;
-  margin-top: -15px;
-}
-.wrapper .option{
-  background: #fff;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 0 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0 10px;
-  border: 2px solid lightgrey;
-  transition: all 0.3s ease;
-}
-.wrapper .option .dot::before{
-  position: absolute;
-  content: "";
-  top: 4px;
-  left: 4px;
-  width: 12px;
-  height: 12px;
-  background: #ae00d9;
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(1.5);
-  transition: all 0.3s ease;
-}
-input[type="radio"]{
-  display: none;
-}
-#option-1:checked:checked ~ .option-1,
-#option-2:checked:checked ~ .option-2{
-  border-color: #654275;
-  background: #632d5e;
-}
-#option-1:checked:checked ~ .option-1 .dot,
-#option-2:checked:checked ~ .option-2 .dot{
-  background: #fff;
-}
-
-.wrapper .option span{
-  font-size: 15px;
-  color: #808080;
-}
-#option-1:checked:checked ~ .option-1 span,
-#option-2:checked:checked ~ .option-2 span{
-  color: #fff;
-} */
-/* FIM CHECKBOX */
 
 /* CHECK CORAÇÃO */
 
@@ -466,15 +381,6 @@ html {
   box-sizing: inherit;
 }
 
-/* body {
-  min-height: 100vh;
-  display: flex;
-  font-family: "Roboto", Arial;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #262433;
-} */
 body .heart-switch {
   margin: 12px 0;
 }
@@ -482,20 +388,6 @@ body .heart-switch {
 /* FIM CHECK CORAÇÃO */
 
 /* LOAD */
-
-/* .load{
-  z-index: 5;
-  position: absolute;
-  display: flex;
-  top: 30%;
-  height: 30vh;
-  width: 0vw;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  right: 50%;
-  filter: drop-shadow(0 0 10px black);
-} */
 
 .container {
   position: absolute;
@@ -570,30 +462,6 @@ body .heart-switch {
   }
 }
 
-/* 
-.shadow {
-  position: relative;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  height: 16px;
-  width: 64px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  border: 1px solid #d9d9d9;
-  animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
-} */
-/* 
-@keyframes shadow {
-  50% {
-    transform: translateX(-50%) scale(0.5);
-    border-color: #f2f2f2;
-  }
-} */
-
-
-
 /* ALERT */
 
 .justify {
@@ -659,25 +527,6 @@ body .heart-switch {
   right: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* .cookies {
-  height: 100%;
-  justify-content: center;
-} */
-
-
-/* @media screen and (min-height: 430px) {
-    main{
-        height: calc(100vh - 80px);
-    }
-  }
-
-@media screen and (min-height: 370px) {
-    main{
-        height: calc(100vh - 68px);
-    }
-  } */
-
 
 @media screen and (max-width: 320px) {
   .wrapper1 {

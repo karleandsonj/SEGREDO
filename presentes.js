@@ -120,6 +120,8 @@ const removeloading = () => {
     </div>
   `;
 
+/*   removeloading();  */
+
   const reloadButton = document.querySelector('#reloadButton');
   reloadButton.addEventListener('click', function() {
     location.reload();
