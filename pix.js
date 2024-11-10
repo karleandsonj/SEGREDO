@@ -1,14 +1,14 @@
 var myImage = document.getElementById('myImage');
 
-myImage.addEventListener('click', function() {
+myImage.addEventListener('click', function () {
   var link = '03458991565'; // Insira o link desejado aqui
-  
+
   navigator.clipboard.writeText(link)
-    .then(function() {
+    .then(function () {
       console.log('Link copiado: ' + link);
       showNotification('Link copiado', 'O link foi copiado para a área de transferência.');
     })
-    .catch(function(err) {
+    .catch(function (err) {
       console.error('Falha ao copiar o link: ', err);
     });
 });

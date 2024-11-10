@@ -43,7 +43,10 @@ const removeloading = () => {
 
   const reloadButton = document.querySelector('#reloadButton');
   reloadButton.addEventListener('click', function() {
-    location.reload();
+    if (reloadButton) {
+      window.location.href = 'presentes.html';
+    }
+    
   });
 
 }
@@ -72,3 +75,5 @@ const handleSubmit = (event) => {
   });
 }
 document.querySelector('form').addEventListener('submit', handleSubmit);/* location.reload(true); */
+
+

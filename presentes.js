@@ -16,59 +16,104 @@ function loadGoogleSheetData(url) {
       // Definir o limite máximo de linhas a serem carregadas (até a linha 10)
       const maxRows = Math.min(tableRows.length, 61);
 
-      // Percorrer as linhas da planilha a partir da linha 3 até o limite máximo (linha 10)
+      // Inicializar uma nova linha
+      let newRow = document.createElement('tr');
+
+      // Percorrer as linhas da planilha a partir da linha 3 até o limite máximo
       for (let i = 3; i < maxRows; i++) {
         const row = tableRows[i];
         const columns = row.querySelectorAll('td');
 
-        // Criar a célula para a coluna "Presentes" (coluna 1)
-        const presentCell = document.createElement('td');
-        const presentData = columns[0].textContent.trim();
-        presentCell.innerHTML = `<span>${presentData}</span>`;
-
-        // Criar a célula para a coluna "Nomes" (coluna 2)
-        const nameCell = document.createElement('td');
+        // Filtrar apenas as linhas que não têm nome preenchido
         const nameData = columns[1].textContent.trim();
         if (nameData === '') {
-          nameCell.innerHTML = 
-            `<form data-row="${i}" class="responsive-form"> <!-- Armazena o índice da linha no atributo data-row -->
-              <label for="name">
-                <input type="text" id="name" class="name" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
-              </label>
-              <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
-                <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
-                  <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
-                </svg>
-              </button>
-            </form>`;
-          // Adicionar o evento de submit ao formulário apenas da célula atual
-          nameCell.querySelector('form').addEventListener('submit', handleSubmit);
-        } else {
-          nameCell.innerHTML = `<span>${nameData}</span>`;
+          const presentData = columns[0].textContent.trim();
+          const presentLink = columns[3].textContent.trim();
+          const presentImg = columns[4].textContent.trim();
+
+          // Criar a célula para a coluna
+          const presentCell = document.createElement('td');
+
+          // Verificar se `presentLink` está vazio
+          if (presentImg === '') {
+            // Exibir imagem padrão quando não houver link
+            presentCell.innerHTML =`
+              <div class="divImgPres">
+                <img class="ImgPres" id="ImgPres" src="${presentImg}">
+                <span class="NomePresente">${presentData}</span>
+                <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
+                  <div class="carrinho">
+                    <img class="Carimg" src="fotos/carrinho_branco.png" alt="Imagem padrão">
+                    <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
+                  </div>
+                </a>
+                <form data-row="${i}" class="responsive-form2">
+                  <label for="name">
+                    <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
+                  </label>
+                  <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
+                    <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
+                      <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
+                    </svg>
+                  </button>
+                </form>
+              </div>`;
+          } else {
+            // Exibir link com a imagem de `presentLink`
+            presentCell.innerHTML = `
+              <div class="divImgPres">
+                <img class="ImgPres" id="ImgPres" src="${presentImg}">
+                <span class="NomePresente">${presentData}</span>
+                <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
+                  <div class="carrinho">
+                    <img class="Carimg" src="fotos/carrinho_branco.png" alt="Imagem padrão">
+                    <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
+                  </div>
+                </a>
+                <form data-row="${i}" class="responsive-form2">
+                  <label for="name">
+                    <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
+                  </label>
+                  <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
+                    <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
+                      <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
+                    </svg>
+                  </button>
+                </form>
+              </div>`;
+          }
+
+          // Adicionar a célula à nova linha
+          newRow.appendChild(presentCell);
+
+          // Adicionar o listener para o evento de submit do formulário
+          presentCell.querySelector('form').addEventListener('submit', handleSubmit);
+                   
+
+/*           // Se a nova linha já tiver duas células, adicioná-la ao corpo da tabela e iniciar uma nova linha
+          if (newRow.childNodes.length === 1) {
+            dataTableBody.appendChild(newRow);
+            newRow = document.createElement('tr'); // Criar uma nova linha
+          }   */              
         }
+      }
+      
 
-        // Criar a nova linha da tabela
-        const newRow = document.createElement('tr');
-        newRow.appendChild(presentCell);
-        newRow.appendChild(nameCell);
-
-        // Adicionar a nova linha à tabela
+      // Adicionar a última linha se tiver células restantes
+      if (newRow.childNodes.length > 0) {
         dataTableBody.appendChild(newRow);
       }
     })
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
 }
 
-
 // Chamar a função para carregar os dados da planilha
 loadGoogleSheetData(sheetURL);
 
-/* ------------------------------------------------------------------------------------------- */
-
-
-
+// Função para manipular o envio do formulário
 const handleSubmit = (event) => {
   event.preventDefault();
+  /* addDigitNum(); */
   addloading();
 
   const formElement = event.target; // Elemento do formulário que foi submetido
@@ -76,7 +121,6 @@ const handleSubmit = (event) => {
   const name = formElement.querySelector('input[name=name]').value; // Obtém o valor do input dentro do formulário
 
   // Salvar o valor na planilha usando o índice da linha (rowIndex) e o valor do input (name)
-
   fetch('https://api.sheetmonkey.io/form/4RhCWv4UpsRQHWvb8iZFmr', {
     method: 'post',
     headers: {
@@ -85,9 +129,19 @@ const handleSubmit = (event) => {
     },
     body: JSON.stringify({ rowIndex, name }), // Envia o índice da linha e o valor do input para a API
   }).then(() => {
-    removeloading();
+    setTimeout(removeloading, 2000);
   });
 }
+
+// Função para adicionar o estado de carregamento
+const addDigitNum = () => {
+  const NumContato = document.querySelector('#DigitarNum');
+  NumContato.innerHTML = `
+    <div class="containerContato">
+      <p> DIGITE SEU NUMERO </p>
+    </div>
+  `;
+};
 
 // Função para adicionar o estado de carregamento
 const addloading = () => {
@@ -111,20 +165,21 @@ const removeloading = () => {
     <div class="d-flex justify-content-center mt-5 h-100">
       <div class="d-flex align-items-center align-self-center card p-3 text-center cookies">
         <img src="https://i.pinimg.com/originals/a1/cd/2e/a1cd2e4a82bf9407d751f02f81baf257.png" width="50" class="core">
-        <span class="mt-2" class="justify"><b>Obrigado pela contribuição 😊</b></span>
+        <span class="mt-2"><b>Obrigado pela contribuição 😊</b></span>
         <span class="justify">
-          <b>Se caso colocou seu nome no presente errado <br> nos chame no WhatsApp.</br>
+          <b>Se caso colocou seu nome no presente errado, nos chame no WhatsApp.</b>
         </span>
         <button class="btn btn-dark mt-3 px-4" type="button" id="reloadButton">✔️</button>
       </div>
     </div>
   `;
 
-/*   removeloading();  */
-
   const reloadButton = document.querySelector('#reloadButton');
-  reloadButton.addEventListener('click', function() {
+  reloadButton.addEventListener('click', function () {
     location.reload();
     loadGoogleSheetData(sheetURL); // Recarrega os dados da planilha
-  }, 1000);
+  });
+
 };
+
+

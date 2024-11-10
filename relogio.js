@@ -1,5 +1,5 @@
 // Data alvo para a contagem regressiva
-var targetDate = new Date("2024-01-21T07:00:00").getTime();
+var targetDate = new Date("2024-12-28T07:00:00").getTime();
 
 // Função para atualizar o contador
 function updateCountdown() {
