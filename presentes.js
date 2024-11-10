@@ -43,7 +43,7 @@ function loadGoogleSheetData(url) {
                 <span class="NomePresente">${presentData}</span>
                 <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
                   <div class="carrinho">
-                    <img class="Carimg" src="fotos/carrinho_branco.png" alt="Imagem padrão">
+                    <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF" alt="Imagem padrão">
                     <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
                   </div>
                 </a>
