@@ -13,7 +13,7 @@ body {
   background-color: #FFF9F2;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   font-size: 100%;
@@ -29,7 +29,6 @@ body.fade-in {
 /*   background-color: rgba(0, 255, 255, 0.164); */
   height: 100vh;
   width: 100vw;
-
 }
 
 .imagem_karleeve {
@@ -186,23 +185,24 @@ h1 {
   margin: 3vh 15vw;
 }
 
-main{
-   display:flow-root;
-/*   height: 100%;
-  width: 100vw; */ 
+main {
+/*   overflow-y: auto;  */ /* Permite rolagem vertical */
+  overflow-x: hidden;
+  height: calc(100vh - 90px) ;
+  width: 100vw;
   margin-bottom: 15vh;
+  position: relative;
 }
 
+main::-webkit-scrollbar {
+  position: absolute;
+  margin-top: 50px;
+  width: 10px;
+}
 
-@media screen and (max-width: 480px){
-  
-  .imagem_karleeve {
-    position: absolute;
-    margin: auto;
-    width: 90vw;
-    margin-top: -5vh;
-  }
-
+main::-webkit-scrollbar-thumb {
+  background-color: #353827;
+  margin-top: 50px;
 }
 
 /* Retirar  */
@@ -212,4 +212,21 @@ main{
     display: none;
   }
 
+  .imagem_karleeve {
+    width: 400px;
+    margin-top: 3vh;
+  }
+
 }
+
+@media screen and (max-width: 355px){
+  
+  .imagem_karleeve {
+    position: absolute;
+    margin: auto;
+    width: 120%;
+    margin-top: 3vh;
+  }
+
+}
+
