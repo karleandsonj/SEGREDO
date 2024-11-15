@@ -553,7 +553,7 @@ span {
 }
 
   .containerD {
-    max-height: calc(100vh - 21vh);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
+    max-height: calc(100vh - 23vh);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
     margin-top: 20px;
     top: 25px;
   }
@@ -607,13 +607,13 @@ span {
   }
 
   .containerD {
-    max-height: calc(100vh - 21vh);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
+    max-height: calc(100vh - 20vh);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
     margin-top: 20px;
-    top: 25px;
+/*     top: 25px; */
   }
 
   #data-table {
-    top: 20px;
+/*     top: 20px; */
     width: 99%;
     border-collapse: collapse;
   }
