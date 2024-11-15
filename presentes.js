@@ -146,6 +146,7 @@ const addDigitNum = () => {
 // Função para adicionar o estado de carregamento
 const addloading = () => {
   const load = document.querySelector('#load');
+  const overlay1 = document.querySelector('#overlay1');
   load.innerHTML = `
     <div class="container">
       <div class="preloader">
@@ -156,6 +157,8 @@ const addloading = () => {
       <div class="shadow"></div>
     </div>
   `;
+
+  overlay1.style.display = 'block';
 };
 
 // Função para remover o estado de carregamento

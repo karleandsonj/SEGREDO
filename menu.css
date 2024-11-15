@@ -30,11 +30,11 @@ a.lineTop1, a.lineTop2{
 }
 
 #menu1 {
-    z-index: 2;
+    z-index: 1;
     width:100%; 
     position:fixed;
     top: 0%;
-    height: 100px;
+    height: 0px;
     justify-content: center;
     align-items: center;
 }
@@ -282,6 +282,7 @@ li:hover .lineTop2:after {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 35px;
 }
 
 .logo{

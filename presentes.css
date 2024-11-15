@@ -25,12 +25,14 @@ body.fade-in {
 }
 
 .NomePresente {
+  position: relative;
+  width: 100%;
   top: 5px;
 }
 
 .divImgPres {
   /*   background-color: #5C6244; */
-  width: 20vw;
+  width: 100%;
   position: relative;
   display: flex;
   /* Define o contêiner como flex */
@@ -47,8 +49,11 @@ body.fade-in {
 }
 
 .ImgPres {
-
-  width: 100px;
+  border: #d5d8c8 solid 1px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de esfumaçamento */
+  min-width: 100px;
+  max-width: 200px;
   height: 100px;
   /* Largura da imagem */
 }
@@ -135,6 +140,7 @@ h3 {
   max-height: calc(100vh - 23vh);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
   margin-top: 30px;
   top: 25px;
+  z-index: 1;
   position: fixed;
   overflow: auto;
   width: 100%;
@@ -207,7 +213,7 @@ span td {
 
 /* Estilo para o texto das células */
 #data-table td span {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   color: #333;
   left: 1px;
@@ -215,7 +221,7 @@ span td {
 
 /* Estilo para a barra de rolagem interna */
 .containerD::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 .containerD::-webkit-scrollbar-thumb {
@@ -231,8 +237,9 @@ span td {
 
 .responsive-form2 {
   position: relative;
-  display: grid;
+/*   display: grid; */
   grid-template-columns: auto auto;
+  top: 10px;
   gap: 10px;
   align-items: center;
 }
@@ -243,13 +250,16 @@ span td {
   padding: 5px;
   box-sizing: border-box;
   text-align: center;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 #submit {
-  left: 0px;
+ /*  left: 0px; */
   align-self: flex-end;
   padding: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 5px;
 }
 
 .btn1 {
@@ -313,7 +323,7 @@ span td {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 10;
 }
 
 .containerContato{
@@ -326,6 +336,7 @@ span td {
 }
 
 .container .preloader {
+  z-index: 12;
   animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
 }
 
@@ -438,7 +449,7 @@ span {
 }
 
 .card {
-  z-index: 8;
+  z-index: 11;
   position: absolute;
   width: 350px;
   height: 130px;
@@ -473,12 +484,14 @@ span {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   /* Fundo semi-transparente */
-  z-index: 1000;
+  z-index: 10;
   /* Fica acima de outros elementos */
 }
 
 .txtNOTF {
+  position: relative;
   color: white;
+  top: 5px;
   margin: 20px;
 }
 
@@ -517,6 +530,8 @@ span {
   /* Faz o botão ser redondo */
   cursor: pointer;
   /* Aponta que o botão é clicável */
+  margin: 5px;
+  padding: 2px;
 }
 
 
@@ -530,6 +545,12 @@ span {
   h3 {
     margin-top: 55px;
   }
+
+@media (max-width: 600px) {
+  .container_notifi {
+    width: 80%;
+  }
+}
 
   .containerD {
     max-height: calc(100vh - 21vh);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
@@ -564,11 +585,10 @@ span {
 
   .name2 {
     position: relative;
-    width: 100%;
+    width: 80%;
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
-    margin-left: 10px;
   }
 
   .responsive-form2 {
@@ -623,7 +643,6 @@ span {
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
-    margin-left: 10px;
   }
 
   .responsive-form2 {
