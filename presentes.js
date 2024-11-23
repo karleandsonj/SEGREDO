@@ -21,6 +21,7 @@ function loadGoogleSheetData(url) {
 
       // Percorrer as linhas da planilha a partir da linha 3 até o limite máximo
       for (let i = 3; i < maxRows; i++) {
+        addloading();
         const row = tableRows[i];
         const columns = row.querySelectorAll('td');
 
@@ -127,6 +128,7 @@ function loadGoogleSheetData(url) {
       if (newRow.childNodes.length > 0) {
         dataTableBody.appendChild(newRow);
       }
+      sairaddloading();
     })
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
 }
@@ -194,6 +196,14 @@ const addloading = () => {
   `;
 
   overlay1.style.display = 'block';
+};
+
+const sairaddloading = () => {
+  const load = document.querySelector('#load');
+  const overlay1 = document.querySelector('#overlay1');
+  
+  load.style.display = 'none';
+  overlay1.style.display = 'none';
 };
 
 // Função para remover o estado de carregamento
