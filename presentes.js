@@ -2,9 +2,12 @@ const sheetURL = "https://docs.google.com/spreadsheets/d/1x6KOfHlEAyEg6aD1NmO8Sj
 
 // Função para carregar os dados da planilha
 function loadGoogleSheetData(url) {
+
   fetch(url)
+
     .then(response => response.text())
     .then(data => {
+      addloading();
       const parser = new DOMParser();
       const htmlDocument = parser.parseFromString(data, 'text/html');
       const tableRows = htmlDocument.querySelectorAll('tbody tr');
@@ -21,13 +24,14 @@ function loadGoogleSheetData(url) {
 
       // Percorrer as linhas da planilha a partir da linha 3 até o limite máximo
       for (let i = 3; i < maxRows; i++) {
-        addloading();
+
         const row = tableRows[i];
         const columns = row.querySelectorAll('td');
 
         // Filtrar apenas as linhas que não têm nome preenchido
         const nameData = columns[1].textContent.trim();
         if (nameData === '') {
+
           const presentData = columns[0].textContent.trim();
           const presentLink = columns[3].textContent.trim();
           const presentImg = columns[4].textContent.trim();
@@ -113,17 +117,11 @@ function loadGoogleSheetData(url) {
 
           // Adicionar o listener para o evento de submit do formulário
           presentCell.querySelector('form').addEventListener('submit', handleSubmit);
-                   
+         
 
-/*           // Se a nova linha já tiver duas células, adicioná-la ao corpo da tabela e iniciar uma nova linha
-          if (newRow.childNodes.length === 1) {
-            dataTableBody.appendChild(newRow);
-            newRow = document.createElement('tr'); // Criar uma nova linha
-          }   */              
         }
       }
       
-
       // Adicionar a última linha se tiver células restantes
       if (newRow.childNodes.length > 0) {
         dataTableBody.appendChild(newRow);
@@ -131,6 +129,7 @@ function loadGoogleSheetData(url) {
       sairaddloading();
     })
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
+
 }
 
 function PixMessage() {
