@@ -14,7 +14,7 @@ function loadGoogleSheetData(url) {
       dataTableBody.innerHTML = '';
 
       // Definir o limite máximo de linhas a serem carregadas (até a linha 10)
-      const maxRows = Math.min(tableRows.length, 61);
+      const maxRows = Math.min(tableRows.length, 62);
 
       // Inicializar uma nova linha
       let newRow = document.createElement('tr');
@@ -34,53 +34,77 @@ function loadGoogleSheetData(url) {
           // Criar a célula para a coluna
           const presentCell = document.createElement('td');
 
-          // Verificar se `presentLink` está vazio
-          if (presentImg === '') {
-            // Exibir imagem padrão quando não houver link
+          if (presentLink === 'PIX') {
             presentCell.innerHTML =`
-              <div class="divImgPres">
-                <img class="ImgPres" id="ImgPres" src="${presentImg}">
-                <span class="NomePresente">${presentData}</span>
-                <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
-                  <div class="carrinho">
-                    <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF" alt="Imagem padrão">
-                    <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
-                  </div>
-                </a>
-                <form data-row="${i}" class="responsive-form2">
-                  <label for="name">
-                    <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
-                  </label>
-                  <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
-                    <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
-                      <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
-                    </svg>
-                  </button>
-                </form>
-              </div>`;
+                <div class="divImgPres">
+                  <img class="ImgPres" id="ImgPres" src="${presentImg}">
+                  <span class="NomePresente pix">${presentData}</span>
+                  <a class="CarLink1 pix" onclick="PixMessage()" id="PIX_PRESENTE" target="_blank" style="text-decoration: none;">
+                    <div class="carrinho pix">
+                      <img class="Carimg pix" src="https://img.icons8.com/?size=100&id=CuUOYOfd3Dy9&format=png&color=000000" alt="PIX">
+                      <label class="CarLink pix" style="position: relative; left: 1px; text-decoration: none; top: -5px;">PIX</label>
+                    </div>
+                  </a>
+                  <form data-row="${i}" class="responsive-form2" style="display: none;">
+                    <label for="name">
+                      <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
+                    </label>
+                    <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
+                      <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>`;
           } else {
-            // Exibir link com a imagem de `presentLink`
-            presentCell.innerHTML = `
-              <div class="divImgPres">
-                <img class="ImgPres" id="ImgPres" src="${presentImg}">
-                <span class="NomePresente">${presentData}</span>
-                <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
-                  <div class="carrinho">
-                    <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF"  alt="Imagem padrão">
-                    <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
-                  </div>
-                </a>
-                <form data-row="${i}" class="responsive-form2">
-                  <label for="name">
-                    <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
-                  </label>
-                  <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
-                    <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
-                      <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
-                    </svg>
-                  </button>
-                </form>
-              </div>`;
+             // Verificar se `presentLink` está vazio
+             if (presentImg === '') {
+              // Exibir imagem padrão quando não houver link
+              presentCell.innerHTML =`
+                <div class="divImgPres">
+                  <img class="ImgPres" id="ImgPres" src="${presentImg}">
+                  <span class="NomePresente">${presentData}</span>
+                  <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
+                    <div class="carrinho">
+                      <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF" alt="Imagem padrão">
+                      <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
+                    </div>
+                  </a>
+                  <form data-row="${i}" class="responsive-form2">
+                    <label for="name">
+                      <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
+                    </label>
+                    <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
+                      <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>`;
+            } else {
+              // Exibir link com a imagem de `presentLink`
+              presentCell.innerHTML = `
+                <div class="divImgPres">
+                  <img class="ImgPres" id="ImgPres" src="${presentImg}">
+                  <span class="NomePresente">${presentData}</span>
+                  <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
+                    <div class="carrinho">
+                      <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF"  alt="Imagem padrão">
+                      <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
+                    </div>
+                  </a>
+                  <form data-row="${i}" class="responsive-form2">
+                    <label for="name">
+                      <input type="text" id="name" class="name2" name="name" placeholder="Digite Seu Nome" autocomplete="off" required>
+                    </label>
+                    <button type="submit" id="submit" style="cursor: pointer;" class="btn1">
+                      <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path transform="translate(0 0)" d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z" id="Fill"></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>`;
+            }
           }
 
           // Adicionar a célula à nova linha
@@ -105,6 +129,17 @@ function loadGoogleSheetData(url) {
       }
     })
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
+}
+
+function PixMessage() {
+  const overlay1 = document.querySelector('#overlay1');
+  document.getElementById('pix-message').style.display = 'block';
+  overlay1.style.display = 'block';
+}
+
+function closePixMessage() {
+  document.getElementById('pix-message').style.display = 'none'; // Esconde a mensagem
+  overlay1.style.display = 'none';
 }
 
 // Chamar a função para carregar os dados da planilha
@@ -184,5 +219,7 @@ const removeloading = () => {
   });
 
 };
+
+
 
 

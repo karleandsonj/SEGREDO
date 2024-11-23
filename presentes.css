@@ -8,6 +8,61 @@
   height: 100%;
 } */
 
+#pix-message {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de esfumaçamento */
+  border-radius: 20px;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  z-index: 9999;
+  position: relative;
+  background-color: #5C6244;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%); 
+  width: 450px;
+}
+
+.qrcodePresente {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de esfumaçamento */
+  border-radius: 20px;
+  background-color: white;
+  margin: 10px;
+  width: 90%;
+  margin-top: 50px;
+}
+
+.FecharPixP  {
+  border: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #00ff0d00;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 2px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.FecharPixP:hover  {
+  background-color: #bf6e3f00;
+  color: rgb(255, 78, 78);
+}
+
+.TituloPIX {
+    position: relative;
+    font-size: 11px;
+    top: 30px;
+}
+
 .mainbody {
   position: relative;
   min-height: calc(100vh - 90px); /* Ajuste 100px para a altura do seu rodapé */
@@ -80,6 +135,22 @@ body.fade-in {
   border-radius: 20px;
 }
 
+
+.carrinho.pix {
+  position: relative;
+  background-color: #66BB22;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  text-align: center;
+  margin-top: 30px;
+  /* Adiciona espaço entre a imagem e o botão */
+  left: 50%;
+  transform: translate(-50%);
+  width: 120px;
+  border-radius: 20px;
+}
+
 .Carimg {
   position: relative;
   justify-content: center;
@@ -90,7 +161,22 @@ body.fade-in {
   margin: auto;
 }
 
+.Carimg.pix{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 25px;
+  height: 85%;
+  top: 2px;
+  margin: auto;
+}
+
 .CarLink {
+  color: white;
+}
+
+.CarLink.pix {
   color: white;
 }
 
@@ -553,17 +639,17 @@ span {
   h3 {
     margin-top: 55px;
   }
+}
 
 @media (max-width: 600px) {
   .container_notifi {
     width: 80%;
   }
-}
 
   .containerD {
     max-height: calc(100vh - 135px);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
     margin-top: 20px;
-    top: 25px;
+/*     top: 25px; */
   }
 
   #data-table {
@@ -608,15 +694,30 @@ span {
   }
 }
 
+@media (max-width: 767px) {
 
-@media (max-width: 507px) {
   h3 {
-    margin-top: 55px;
+    margin-top: 30px;
   }
 
   .containerD {
     max-height: calc(100vh - 135px);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
-    margin-top: 20px;
+    margin-top: 52px;
+    bottom: 92px;
+/*     top: 25px; */
+  }
+
+}
+
+@media (max-width: 507px) {
+  h3 {
+    margin-top: 30px;
+  }
+
+  .containerD {
+    max-height: calc(100vh - 135px);  /* Altura limitada (100% da altura da tela menos 100px para o botão) */
+    margin-top: 52px;
+/*     bottom: -21px; */
 /*     top: 25px; */
   }
 
@@ -660,4 +761,23 @@ span {
     align-items: center;
     width: 80vw;
   }
+
+  #pix-message {
+    width: 80vw;
+  } 
+
+  .TituloPIX {
+    position: relative;
+    font-size: 11px;
+    top: 30px;
+  }
+
+  .qrcodePresente {
+    margin-top: 50px;
+  }
+
 }
+
+
+
+

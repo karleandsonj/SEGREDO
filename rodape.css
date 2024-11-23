@@ -16,10 +16,11 @@ footer {
 }
 
 .qrcode {
-  width: 10vw;
+  width: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 5px;
 }
 
 .qrcode1 {
@@ -48,6 +49,7 @@ footer {
 .container-textrod {
   width: 20vh;
   display: block;
+  margin-right: 10px;
 }
 
 .textrod {
