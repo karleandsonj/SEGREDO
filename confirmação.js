@@ -61,7 +61,7 @@ const handleSubmit = (event) => {
   /* const Presentes = document.querySelector('select[name=Presentes]').value; */
   const email = document.querySelector('input[name=email]').value;
   const telefone = document.querySelector('input[name=telefone]').value;
-  const presença = document.querySelector('input[name=presença]').value;
+/*   const presença = document.querySelector('input[name=presença]').value; */
 
   fetch('https://api.sheetmonkey.io/form/wnxVCxtKEARrR36z6kd5kM', {
     method: 'post',
@@ -69,7 +69,7 @@ const handleSubmit = (event) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ name, email, telefone, presença }),
+    body: JSON.stringify({ name, email, telefone }),
   }).then(() => {
     removeloading();
   });
