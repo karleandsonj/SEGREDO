@@ -26,16 +26,19 @@ body.fade-in {
 }
 
 .containerft {
-/*   background-color: rgba(0, 255, 255, 0.164); */
+  top: -50px;
+  position: relative;
+  display: flex;
   height: 100vh;
   width: 100vw;
+  
 }
 
 .imagem_karleeve {
-  position: absolute;
-  margin: auto;
+  position: relative;
+/*   margin: auto; */
   width: 100%;
-  height: 112%;
+  height: 100%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -82,9 +85,9 @@ h1.NomeNoivos {
   justify-content: center;
   align-items: center;
   margin: 0px auto;
-/*   height: 400px; */
-  max-width: 700px; /* Defina um valor máximo para a largura */
-  max-height: 600px; /* Defina um valor máximo para a largura */
+/*   height: 700px; */
+  max-width: 700px; 
+  max-height: 600px; 
 /*   background-color: #7c0000; */
   padding: 15px; /* Adicione um espaçamento interno */
   box-sizing: border-box; /* Inclui padding no cálculo da largura */
@@ -122,6 +125,7 @@ h1.NomeNoivos {
   position: relative;
 /*   background-color: aqua; */
   width: 70%;
+  height: 700px;
   padding-bottom: 50%; /* Proporção para manter a altura */
   overflow: hidden; /* Oculta o overflow */
   
@@ -210,9 +214,7 @@ main::-webkit-scrollbar-thumb {
 /* Retirar  */
 @media screen and (max-width: 766px){
   .imagem_karleeve {
-    width: 150vw;
-    margin-top: 3vh;
-
+    width: 200%;
   }
 
   .KarleEveImg {
@@ -232,16 +234,17 @@ main::-webkit-scrollbar-thumb {
       overflow: hidden; /* Oculta o overflow */
       
     }
+}
 
-    .imagem_karleeve {
+/*     .imagem_karleeve {
       top: 210px;
       width: 180%;
       height: 148%;
-    }
+    } 
 
 }
 
-@media screen and (max-width: 490px){
+/* @media screen and (max-width: 490px){
   
   .imagem_karleeve {
     height: 152%;
@@ -279,10 +282,7 @@ main::-webkit-scrollbar-thumb {
 @media screen and (max-width: 355px){
   
   .imagem_karleeve {
-    position: absolute;
-    margin: auto;
     width: 200%;
-    margin-top: 3vh;
   }
 
-}
+}  */
