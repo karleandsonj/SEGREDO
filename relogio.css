@@ -1,20 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 #countdown {
-    color: #A4B792; /* Define a cor do texto */
+    color: #ffffff; /* Define a cor do texto */
     -webkit-text-stroke: 1.7px #252921; /* Define a espessura e a cor da borda */
     z-index: 0;
-    font-size: 8vh;
+    font-size: 12vh;
     justify-content: center;
     text-align: center;
-    margin-top: 75vh;
+    margin-top: 70vh;
     display: grid;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+/*     right: 0; */
+font-family: 'Allura', cursive;
   }
 
 @media screen and (max-width: 480px){
   #countdown{
-    top: -5vh;
-    font-size: 10vw;
+    top: 0vh;
+    font-size: 15vw;
   }
 }

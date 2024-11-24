@@ -335,29 +335,18 @@ hr {
     /* Outras propriedades opcionais, como font-weight e font-style, podem ser especificadas aqui */
   }
 
-  .menuE,
-  .menuK{
-    top: 10px;
-    color: #7c0000;
-  }
-
-  .menuE {
-    position:absolute;
-    right: 15px; 
-    font-size: 50px;
-    font-family: 'ALTA', sans-serif;
-    color: #E6E7E2;
-    /* background-color: #ffffff; */
+  .menuE1 {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 17vh;
   }
   
-  .menuK {
+  .menuK1 {
     position: absolute;
-    left: 15px;
-    font-size: 50px;
-    font-family: 'ALTA', sans-serif;
-    /* background-color: #ffffff; */
-    text-align: end;
-    color: #E6E7E2;
+    left: 5px;
+    top: 5px;
+    width: 20vh;
   }
 
   /* NAVCON INICIO */
@@ -486,23 +475,20 @@ hr {
 }
 
 @media screen and (max-width: 370px) {
-  .menuK,
-  .menuE{
-    font-size: 45px;
+  .menuK1{
+    top: 10px;
+    width: 30vw;
+  }
+
+  .menuE1{
+    width: 25vw;
+    top: 10px;
   }
 }
 
-@media screen and (max-width: 370px) {
-  .menuK,
-  .menuE{
-    font-size: 40px;
-
-  }
-}
-
-@media screen and (max-width: 330px) {
+/* @media screen and (max-width: 330px) {
   .menuK,
   .menuE{
     font-size: 35px;
   }
-}
+} */

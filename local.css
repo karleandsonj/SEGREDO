@@ -73,7 +73,7 @@ body.fade-in {
   }
 
 .text {
-  margin-top: 120px;
+  margin-top: 105px;
   text-align: center ;
   font-size: 20px;
   font-family: 'Tan Twinkle', sans-serif;
@@ -107,14 +107,12 @@ body.fade-in {
   }
 
   .rua{
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 10vh;
-  }
-
-  .master{
-    width: 100%;
-    display: flex;
-
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+/*     width: 90%; */
   }
 }
 
@@ -134,16 +132,17 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  margin-top: -50px;
+  margin-top: -40px;
   max-width: 700px; /* Defina um valor máximo para a largura */
   max-height: 600px; /* Defina um valor máximo para a largura */
 /*   background-color: #7c0000; */
   padding: 20px; /* Adicione um espaçamento interno */
   box-sizing: border-box; /* Inclui padding no cálculo da largura */
+  margin-bottom: 150px;
 }
 
 .thumbnails {
-  display: flex; /* Use flexbox para alinhar as miniaturas */
+  display: none; /* Use flexbox para alinhar as miniaturas */
   justify-content: center;
   align-items: center;
 /*   background-color: #e63946; */
@@ -175,8 +174,7 @@ h1 {
 /*   background-color: aqua; */
   width: 100%;
   padding-bottom: 50%; /* Proporção para manter a altura */
-  overflow: hidden; /* Oculta o overflow */
-  
+  overflow: hidden; /* Oculta o overflow */ 
 }
 
 .master img {
@@ -195,8 +193,8 @@ h1 {
   left: 0;
   right: auto;
   bottom: 0;
-  font-size: 20px;
-  line-height: 250px;
+  font-size: 25px;
+  line-height: 330px;
   width: 50px;
   color: #b4ff6e;
   transition: all 600ms ease-in-out;
@@ -222,9 +220,16 @@ h1 {
   background: linear-gradient(to right, transparent 0%, #A4B792 100%);
 }
 
-@media (max-width: 600px) {
-  .thumbnails img {
-    margin: 20px 0;
-  }
+@media screen and (max-width: 650px){
+  
+  .master {
+    /*   top: 20px; */
+      position: relative;
+    /*   background-color: aqua; */
+      width: 100%;
+      padding-bottom: 50%; /* Proporção para manter a altura */
+      overflow: hidden; /* Oculta o overflow */
+      
+    }
 
 }
