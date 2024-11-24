@@ -7,7 +7,6 @@ function loadGoogleSheetData(url) {
 
     .then(response => response.text())
     .then(data => {
-      addloading();
       const parser = new DOMParser();
       const htmlDocument = parser.parseFromString(data, 'text/html');
       const tableRows = htmlDocument.querySelectorAll('tbody tr');
@@ -17,7 +16,7 @@ function loadGoogleSheetData(url) {
       dataTableBody.innerHTML = '';
 
       // Definir o limite máximo de linhas a serem carregadas (até a linha 10)
-      const maxRows = Math.min(tableRows.length, 62);
+      const maxRows = Math.min(tableRows.length, 64);
 
       // Inicializar uma nova linha
       let newRow = document.createElement('tr');
@@ -126,7 +125,6 @@ function loadGoogleSheetData(url) {
       if (newRow.childNodes.length > 0) {
         dataTableBody.appendChild(newRow);
       }
-      sairaddloading();
     })
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
 
