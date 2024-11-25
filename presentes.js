@@ -2,9 +2,12 @@ const sheetURL = "https://docs.google.com/spreadsheets/d/1x6KOfHlEAyEg6aD1NmO8Sj
 
 // Função para carregar os dados da planilha
 function loadGoogleSheetData(url) {
+  const loadingElement = document.getElementById('loading');
+
+  // Exibir a barra de carregamento
+  loadingElement.style.display = 'block';
 
   fetch(url)
-
     .then(response => response.text())
     .then(data => {
       const parser = new DOMParser();
@@ -125,16 +128,15 @@ function loadGoogleSheetData(url) {
       if (newRow.childNodes.length > 0) {
         dataTableBody.appendChild(newRow);
       }
-
-      const divImgPres = document.querySelector('.divImgPres');
-      if (!divImgPres) {
-        addloading(); // Adicionar loading se "divImgPres" não estiver no DOM
-      } else {
-        sairaddloading(); // Remover loading, caso exista
-      }
+      
 
     })
-    .catch(error => console.error('Erro ao carregar dados da planilha:', error));
+
+    .catch(error => console.error('Erro ao carregar dados da planilha:', error))
+    .finally(() => {
+      // Ocultar a barra de carregamento
+      loadingElement.style.display = 'none';
+    });
 
 }
 
