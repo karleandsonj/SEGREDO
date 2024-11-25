@@ -120,11 +120,19 @@ function loadGoogleSheetData(url) {
 
         }
       }
-      
+
       // Adicionar a última linha se tiver células restantes
       if (newRow.childNodes.length > 0) {
         dataTableBody.appendChild(newRow);
       }
+
+      const divImgPres = document.querySelector('.divImgPres');
+      if (!divImgPres) {
+        addloading(); // Adicionar loading se "divImgPres" não estiver no DOM
+      } else {
+        sairaddloading(); // Remover loading, caso exista
+      }
+
     })
     .catch(error => console.error('Erro ao carregar dados da planilha:', error));
 
@@ -196,11 +204,11 @@ const addloading = () => {
 };
 
 const sairaddloading = () => {
-  const load = document.querySelector('#load');
-  const overlay1 = document.querySelector('#overlay1');
-  
-  load.style.display = 'none';
-  overlay1.style.display = 'none';
+  // Remove o indicador de carregamento
+  const loadingDiv = document.getElementById('loading');
+  if (loadingDiv) {
+    loadingDiv.remove();
+  }
 };
 
 // Função para remover o estado de carregamento
