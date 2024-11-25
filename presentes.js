@@ -135,7 +135,7 @@ function loadGoogleSheetData(url) {
     .catch(error => console.error('Erro ao carregar dados da planilha:', error))
     .finally(() => {
       // Ocultar a barra de carregamento
-      loadingElement.style.display = 'none';
+      loadingElement.style.display = 'block';
     });
 
 }
