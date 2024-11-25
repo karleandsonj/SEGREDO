@@ -121,6 +121,7 @@ body.fade-in {
 .divImgPres {
   /*   background-color: #5C6244; */
   width: 100%;
+  min-height: 252px;
   position: relative;
   display: flex;
   /* Define o contêiner como flex */
@@ -140,7 +141,7 @@ body.fade-in {
   border: #d5d8c8 solid 1px;
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de esfumaçamento */
-  min-width: 100px;
+  min-width: 80px;
   max-width: 200px;
   height: 100px;
   /* Largura da imagem */

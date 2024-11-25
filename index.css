@@ -148,7 +148,7 @@ h1.NomeNoivos {
   right: auto;
   bottom: 0;
   font-size: 25px;
-  line-height: 330px;
+  line-height: 500px;
   width: 50px;
   color: #b4ff6e;
   transition: all 600ms ease-in-out;
@@ -226,63 +226,11 @@ main::-webkit-scrollbar-thumb {
 @media screen and (max-width: 650px){
   
   .master {
-    /*   top: 20px; */
-      position: relative;
-    /*   background-color: aqua; */
       width: 100%;
-      padding-bottom: 50%; /* Proporção para manter a altura */
-      overflow: hidden; /* Oculta o overflow */
-      
     }
 }
 
-/*     .imagem_karleeve {
-      top: 210px;
-      width: 180%;
-      height: 148%;
-    } 
+ @media screen and (max-width: 466px){
+
 
 }
-
-/* @media screen and (max-width: 490px){
-  
-  .imagem_karleeve {
-    height: 152%;
-  }
-
-}
-
-@media screen and (max-width: 393px){
-  
-  .imagem_karleeve {
-    height: 145%;
-  }
-
-}
-
-
-@media screen and (max-width: 376px){
-  
-  .imagem_karleeve {
-    height: 148%;
-  }
-
-}
-
-@media screen and (max-width: 360px){
-  
-  .imagem_karleeve {
-    height: 142%;
-  }
-
-}
-
-
-
-@media screen and (max-width: 355px){
-  
-  .imagem_karleeve {
-    width: 200%;
-  }
-
-}  */
