@@ -154,7 +154,7 @@ function addNotificacaoLINK(presentLink) {
           Endereço de envio se precisar 👇<br><br>
           <b> Avenida Senhor do Bonfim, Nº 375, Jequiezinho, Jequié-BA <BR> CEP: 45208.555 </b>
           </p>
-          <a class="continuarNOTa" href="${presentLink}" target="_blank" style="text-decoration: none;">
+          <a id="sairnocontinuar" class="continuarNOTa" href="${presentLink}" target="_blank" style="text-decoration: none;">
           <h4 class="continuarNOT">CONTINUAR</h4>
           </a>
       </div>
@@ -169,6 +169,11 @@ function addNotificacaoLINK(presentLink) {
       Notificacao.style.display = 'none';
       overlay.style.display = 'none';
   });
+
+  document.querySelector('#sairnocontinuar').addEventListener('click', () => {
+    Notificacao.style.display = 'none';
+    overlay.style.display = 'none';
+});
 }
 
 function PixMessage() {
