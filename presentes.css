@@ -245,6 +245,31 @@ h3 {
   /* Adicionando margem automática para centralizar horizontalmente */
 }
 
+.continuarNOTa{
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.continuarNOT {
+  align-items: center;
+  align-self: center;
+  background-color: #448014;
+  border-radius: 20px;
+  width: 150px;
+  text-align: center; /* Centraliza texto dentro do botão */
+  padding: 5px 0; /* Opcional: Adiciona espaço interno */
+  margin-bottom: 20px;
+  color: #ffffff;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.continuarNOT:hover {
+  border: 1px solid #448014;
+  background-color: #ffffff;
+  color: #448014;
+}
+
 .containergeral {
   background-color: #ffffff;
   position: fixed;

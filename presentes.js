@@ -71,9 +71,9 @@ function loadGoogleSheetData(url) {
                 <div class="divImgPres">
                   <img class="ImgPres" id="ImgPres" src="${presentImg}">
                   <span class="NomePresente">${presentData}</span>
-                  <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
-                    <div class="carrinho">
-                      <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF" alt="Imagem padrão">
+                  <a class="CarLink1" target="_blank" style="text-decoration: none;">
+                    <div class="carrinho" onclick="addNotificacaoLINK('${presentLink}')">
+                      <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF"  alt="Imagem padrão">
                       <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
                     </div>
                   </a>
@@ -94,8 +94,8 @@ function loadGoogleSheetData(url) {
                 <div class="divImgPres">
                   <img class="ImgPres" id="ImgPres" src="${presentImg}">
                   <span class="NomePresente">${presentData}</span>
-                  <a class="CarLink1" href="${presentLink}" target="_blank" style="text-decoration: none;">
-                    <div class="carrinho">
+                  <a class="CarLink1" target="_blank" style="text-decoration: none;">
+                    <div class="carrinho" onclick="addNotificacaoLINK('${presentLink}')">
                       <img class="Carimg" src="https://img.icons8.com/?size=100&id=59993&format=png&color=FFFFFF"  alt="Imagem padrão">
                       <label class="CarLink" style="position: relative; left: 1px; text-decoration: none; top: -7px;">Link</label>
                     </div>
@@ -138,6 +138,37 @@ function loadGoogleSheetData(url) {
       loadingElement.style.display = 'none';
     });
 
+}
+
+// Adiciona o parâmetro à função addNotificacaoLINK
+function addNotificacaoLINK(presentLink) {
+  const Notificacao = document.querySelector('#notificacao');
+  const overlay = document.querySelector('#overlay');
+
+  // Adiciona o conteúdo da notificação
+  Notificacao.innerHTML = `
+      <div class="container_notifi">
+          <div id="closeButton">X</div> <!-- Botão para fechar -->
+          <p class="txtNOTF"> LEMBRE-SE <br><br>
+          Os links são referências. Se preferir, pode pedir em outro site. <BR>
+          Endereço de envio se precisar 👇<br><br>
+          <b> Avenida Senhor do Bonfim, Nº 375, Jequiezinho, Jequié-BA <BR> CEP: 45208.555 </b>
+          </p>
+          <a class="continuarNOTa" href="${presentLink}" target="_blank" style="text-decoration: none;">
+          <h4 class="continuarNOT">CONTINUAR</h4>
+          </a>
+      </div>
+  `;
+
+  // Exibe a notificação e o overlay
+  Notificacao.style.display = 'block';
+  overlay.style.display = 'block';
+
+  // Adiciona evento para fechar a notificação
+  document.querySelector('#closeButton').addEventListener('click', () => {
+      Notificacao.style.display = 'none';
+      overlay.style.display = 'none';
+  });
 }
 
 function PixMessage() {
